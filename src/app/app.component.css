@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
