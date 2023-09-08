@@ -1,15 +1,17 @@
 <div class="container">
   <header>
-    <img src="path_to_logo.png" alt="Tritone Logo" class="logo">
+    <img src="assets/images/logo.png" alt="Tritone Logo" class="logo">
+    <div class="nav-container">
     <nav>
-      <a routerLink="/">Home</a>
-      <a routerLink="/about-us">About Us</a>
-      <a routerLink="/auditions">Auditions</a>
-      <a routerLink="/photos">Photos</a>
-      <a routerLink="/bookings">Bookings</a>
+      <a routerLink="/Home" class="body-text">Home</a>
+      <a routerLink="/about-us"  class="body-text">About Us</a>
+      <a routerLink="/auditions"  class="body-text">Auditions</a>
+      <a routerLink="/photos"  class="body-text">Photos</a>
+      <a routerLink="/bookings"  class="body-text">Bookings</a>
+      <a routerLink="/contact us"  class="body-text">Bookings</a>
     </nav>
     <app-theme-toggle></app-theme-toggle>
+  </div>
   </header>
-
   <router-outlet></router-outlet>
 </div>

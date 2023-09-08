@@ -1,18 +1,37 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--background-color);
-  }
-  
-  nav a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+}
+
+.logo {
+  width: 145px;
+  height: 45px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust as necessary to create space between nav and toggle button */
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Adjust as necessary to create space between links */
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+app-theme-toggle {
+  font-size: 24px; /* Set to your body text size */
+}

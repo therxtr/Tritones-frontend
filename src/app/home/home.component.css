@@ -1,0 +1,188 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .body-text {
+    font-size: 24px; /* Set to your body text size */
+  }
+  
+  .intro {
+    display: flex;
+    width: 100%;
+    height: 720px; /* Adjust as necessary */
+  }
+  
+  .photo-container {
+    position: relative;
+    width: 66.6667%; /* 960 / 1440 */
+    height: 100%;
+  }
+  
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-content {
+    flex: 1;
+    background: linear-gradient(to left, var(--background-color-dark), transparent 25%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%; /* Adjust as necessary */
+  }
+  
+  .join-button {
+    width: 221px; /* Adjust as necessary */
+    height: 86px; /* Adjust as necessary */
+    padding: 24px 61px; /* Adjust as necessary */
+    border-radius: 20px; /* Adjust as necessary */
+    background-color: #40667D; /* Adjust as necessary */
+    color: var(--text-color-dark); /* Adjust as necessary */
+    border: none; /* Remove default button border */
+    font-size: 24px; /* Adjust as necessary to match your typography settings */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    top: 526px; /* Adjust as necessary */
+    left: 1054px; /* Adjust as necessary */
+    transition: transform 0.3s; /* Add transition for click animation */
+  }
+  
+  .join-button:active {
+    transform: scale(0.95); /* Add scale transformation for click animation */
+  }
+  .our-music {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+  
+  .content-block {
+    width: 1000px; /* Adjust as necessary */
+    height: 500px; /* Adjust as necessary */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 20px;
+    background-color: #343437; /* Set the background color to match the dark theme */
+    border-radius: 10px; /* Maintain the border-radius */
+    margin-top: 30px;
+  }
+  
+  .albums {
+    display: flex;
+    gap: 60px; /* Increase the gap between albums */
+    justify-content: center;
+  }
+  
+  .album {
+    width: 100px; /* Adjust as necessary */
+    height: 100px; /* Adjust as necessary */
+    background-color: var(--background-color-light); /* Adjust as necessary */
+    display: flex;
+    color: var(--text-color-dark);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .discover-button {
+    width: 325px;
+    height: 86px;
+    padding: 24px 61px;
+    border-radius: 20px;
+    border: 1px solid var(--background-color-light); /* Adjust as necessary */
+    color: var(--text-color-dark); /* Adjust as necessary */
+    background-color: transparent; /* Set background color to transparent */
+    margin-top: 30px;
+    font-size: 24px; /* Set the font size to match the body text size */
+    transition: transform 0.3s; /* Add transition for click animation */
+  }
+  
+  .discover-button:active {
+    transform: scale(0.95); /* Add scale transformation for click animation */
+  }
+  
+  .transition {
+    display: flex;
+
+
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust as necessary to create reasonable space between elements */
+    max-width: 600px; /* Adjust as necessary to create reasonable space beside the image */
+  }
+  
+  .transition-image {
+    width: 596px;
+    height: 446px;
+    border-radius: 10px; /* Optional: to add rounded corners to the image */
+  }
+  
+  .transition-button {
+    width: 261px;
+    height: 86px;
+    padding: 24px 61px;
+    border-radius: 20px;
+    background-color: #40667D;
+    color: var(--text-color-dark);
+    border: none;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    font-size: 24px; /* Set the font size to match the body text size */
+  }
+  
+  .transition-button:active {
+    transform: scale(0.95);
+  }
+  
+  
+  .end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 580px;
+    background-color: #164561;
+  }
+  
+  .end-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Adjust as necessary to create reasonable space between elements */
+  }
+  
+  .end-button {
+    width: 325px; /* Adjust as necessary */
+    height: 86px; /* Adjust as necessary */
+    padding: 24px 61px; /* Adjust as necessary */
+    border-radius: 20px; /* Adjust as necessary */
+    border: 1px solid var(--background-color-light); /* Adjust as necessary */
+    color:var(--background-color-light);
+    background-color: transparent; /* Set background color to transparent */
+    transition: transform 0.3s; /* Add transition for click animation */
+    font-size: 24px; /* Set the font size to match the body text size */
+  }
+  
+  .end-button:active {
+    transform: scale(0.95); /* Add scale transformation for click animation */
+  }
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
