@@ -5,19 +5,98 @@ body, html {
     height: 100%;
   }
   .body-text {
-    font-size: 24px; /* Set to your body text size */
+    font-size: 24px; 
   }
+  
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .photo-container {
+      
+      width: 768px; /* Set the width for the tablet view */
+      height: 473px;
+    }
+  
+    .photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Changed to cover to crop the image */
+    }
+  
+    .text-content {
+      padding-left: 0;
+      background: none;
+    }
+  
+    .intro h1 {
+      font-size: 40px; /* Adjust the font size for h1 in tablet view */
+    }
+  
+    .intro .body-text {
+      font-size: 25px; /* Adjust the font size for body text in tablet view */
+    }
+  
+    .join-button {
+      align-self: center; /* Align the button in the center */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .intro {
+      flex-direction: column;
+      align-items: left;
+      text-align: left;
+    }
+    .photo-container {
+      width: 480px; /* Set the width for the mobile view */
+      height: 260px; /* Set the height for the mobile view */
+    }
+  
+    .intro h1 {
+      font-size: 24px; /* Set the h1 font size for the mobile view */
+    }
+  
+    .intro .body-text {
+      font-size: 20px; /* Set the body text size for the mobile view */
+    }
+  
+    .join-button {
+      width: 113px; /* Set the button width for the mobile view */
+      height: 44px; /* Set the button height for the mobile view */
+    }
+  
+    .our-music h2 {
+      font-size: 22px; /* Set the h2 font size in the "Our Music" section for the mobile view */
+    }
+  
+    .our-music .body-text {
+      font-size: 18px; /* Set the body text size in the "Our Music" section for the mobile view */
+    }
+  
+    .discover-button {
+      width: 176px; /* Set the button width in the "Our Music" section for the mobile view */
+      height: 44px; /* Set the button height in the "Our Music" section for the mobile view */
+    }
+  }
+  
+  
   
   .intro {
     display: flex;
     width: 100%;
-    height: 720px; /* Adjust as necessary */
+    height: auto; /* Adjust as necessary */
   }
+
+  
   
   .photo-container {
     position: relative;
-    width: 66.6667%; /* 960 / 1440 */
-    height: 100%;
+    width: 960px; /* 960 / 1440 */
+    height: 721px;
   }
   
   .photo {
@@ -53,6 +132,15 @@ body, html {
   .join-button:active {
     transform: scale(0.95); /* Add scale transformation for click animation */
   }
+  @media (max-width: 480px) {
+    .our-music h2{
+    font-size: 22px;
+    }
+    .discover-button{
+      font-size: 18px;
+    }
+  }
+
   .our-music {
     display: flex;
     justify-content: center;
@@ -106,10 +194,50 @@ body, html {
     transform: scale(0.95); /* Add scale transformation for click animation */
   }
   
+  @media (max-width: 768px) {
+    .transition {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .text-content {
+      max-width: none;
+      gap: 10px;
+    }
+
+    .transition-button {
+      align-self: center;
+    }
+
+    
+
+  }
+
+  @media (max-width: 480px) {
+  
+    .transition-image {
+      width: 394px;
+      height: 295px;
+    }
+  
+    .transition h1 {
+      font-size: 22px;
+    }
+  
+    .transition .body-text {
+      font-size: 18px;
+    }
+  
+    .transition-button {
+      width: 141px;
+      height: 44px;
+    }
+  }
+  
+  
   .transition {
     display: flex;
-
-
   }
   
   .text-content {
@@ -142,12 +270,38 @@ body, html {
     transform: scale(0.95);
   }
   
+  @media (max-width: 768px) {
+
+    .end h1 {
+      font-size: 40px; /* Adjust the font size for h1 in tablet view */
+    }
+  
+    .end .body-text {
+      font-size: 24px; /* Adjust the font size for body text in tablet view */
+    }
+  }
+  
+  @media (max-width: 480px) {
+  
+    .end h1 {
+      font-size: 22px;
+    }
+  
+    .end .body-text {
+      font-size: 18px;
+    }
+  
+    .end-button {
+      width: 196px;
+      height: 57px;
+    }
+  }
   
   .end {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 580px;
+    height: 700px;
     background-color: #164561;
   }
   
@@ -174,6 +328,9 @@ body, html {
   .end-button:active {
     transform: scale(0.95); /* Add scale transformation for click animation */
   }
+
+  
+
   
   
 
