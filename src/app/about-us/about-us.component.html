@@ -32,4 +32,25 @@
         <button class="nav-button baritones-bass"><p class="body-text">Baritones & Bass</p></button>
     </div>
 </div>
+
+<div>
+    <h2 class="headline-2">Members</h2>
+    <ul>
+        <li *ngFor="let member of members">
+        <span class="member-name body-text">{{ member.name }}</span> - 
+        <span class="member-role body-text">{{ member.role }}</span>
+        </li>
+    </ul>
+
+    <h2 class="headline-2">Board Members</h2>
+    <ul>
+        <li *ngFor="let board of boards">
+        <span class="board-name body-text">{{ board.name }}</span> - 
+        <span class="board-position body-text">{{ board.position }}</span>
+        </li>
+    </ul>
+</div>
+
+  
+
   
