@@ -1,9 +1,22 @@
 # Tritones-frontend
+Front end application for the UCSD Tritones website.
 
-As of 9/12:
+in order to run app, needs
 
-Added services for the contact us page and the "about us" called the members service 
+ng new tritone
 
-sent the data of the members to the about us component
+ng generate component home
 
-sent some of the data needed for the contact form to interact with the django rest framework (temporarily not working trying to get it fixed) 
+ng generate component about-us
+
+ng generate component auditions
+
+ng generate component photos
+
+ng generate component bookings
+
+Latest:
+Home-page almost done
+audition and about us page in progress.
+updated asset.
+updated navigation links.
