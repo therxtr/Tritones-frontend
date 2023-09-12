@@ -9,6 +9,8 @@ import { AuditionsComponent } from './auditions/auditions.component';
 import { PhotosComponent } from './photos/photos.component';
 import { BookingsComponent } from './bookings/bookings.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
