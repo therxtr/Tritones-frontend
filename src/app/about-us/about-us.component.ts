@@ -14,11 +14,11 @@ export class AboutUsComponent implements OnInit {
   constructor(private memberService: MemberService) {}
 
   ngOnInit(): void {
-    this.memberService.getProducts().subscribe((data) => {
+    this.memberService.getMembers().subscribe((data) => {
       this.members = data;
     });
 
-    this.memberService.getOrders().subscribe((data) => {
+    this.memberService.getBoards().subscribe((data) => {
       this.boards = data;
     });
   }

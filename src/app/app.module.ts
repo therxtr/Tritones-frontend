@@ -10,8 +10,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { BookingsComponent } from './bookings/bookings.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,14 +20,14 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AuditionsComponent,
     PhotosComponent,
     BookingsComponent,
-    ThemeToggleComponent,
-    ContactUsComponent
+    ThemeToggleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

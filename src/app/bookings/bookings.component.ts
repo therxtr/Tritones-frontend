@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../contact.service'; // Import the service
 import { catchError } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -11,45 +12,27 @@ import { catchError } from 'rxjs/operators';
 })
 
 export class BookingsComponent {
-  contactForm: FormGroup;
-  submissionStatus: string | null = null;
+  formData = {
+    name: '',
+    subject: '',
+    email: '',
+    message: ''
+  };
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private contactService: ContactService // Inject the service
-  ) {
-    this.contactForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
-    });
-  }
+  constructor(private http: HttpClient) {}
 
   onSubmit() {
-    if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-
-      // Call the service to submit the form data
-      this.contactService.submitContactForm(formData)
-        .pipe(
-          catchError((error) => {
-            // Handle error (e.g., show error message)
-            this.submissionStatus = 'An error occurred while submitting the form';
-            throw error;
-          })
-        )
-        .subscribe(
-          (response) => {
-            // Submission successful, handle response (e.g., show success message)
-            this.submissionStatus = 'Form submitted successfully';
-            // Optionally, reset the form
-            this.contactForm.reset();
-          }
-        );
-    } else {
-      // Form is invalid, show error message or perform other actions
-      this.submissionStatus = 'Form is not valid. Please check your inputs.';
-    }
+    console.log('onSubmit function called');
+    console.log(this.formData)
+    this.http.post('http://127.0.0.1:8000/contactData/', this.formData).subscribe(
+        (response) => {
+          console.log('Form submitted successfully', response);
+          // Handle success (e.g., show a success message)
+        },
+        (error) => {
+          console.error('Form submission error', error);
+          // Handle error (e.g., display an error message)
+        }
+      );
   }
 }
