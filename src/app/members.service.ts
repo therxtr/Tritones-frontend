@@ -12,11 +12,11 @@ export class MemberService {
   
   constructor(private http: HttpClient) {}
 
-  getMembers(): Observable<any[]> {
+  getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrlMembers);
   }
 
-  getBoards(): Observable<any[]> {
+  getOrders(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrlBoard);
   }
 }

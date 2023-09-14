@@ -22,7 +22,7 @@ export class AboutUsComponent implements OnInit {
   constructor(private memberService: MemberService,private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
-    this.memberService.getMembers().subscribe((data) => {
+    this.memberService.getProducts().subscribe((data) => {
       this.members = data;
       this.sopranos = this.members.filter(member => member.voicePart.toLowerCase().includes('soprano'));
       this.mezzos = this.members.filter(member => member.voicePart.toLowerCase().includes('mezzo'));
@@ -42,7 +42,7 @@ export class AboutUsComponent implements OnInit {
       };
     });
 
-    this.memberService.getBoards().subscribe((data) => {
+    this.memberService.getOrders().subscribe((data) => {
       this.boards = data;
     });
   }

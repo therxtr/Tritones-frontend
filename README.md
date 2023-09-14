@@ -15,11 +15,9 @@ ng generate component photos
 
 ng generate component bookings
 
-
-
 ng generate component contact-us
 
 
 Latest:
 complete about us front end back end connection
-about us text display fix.
+home page fix, about us updates

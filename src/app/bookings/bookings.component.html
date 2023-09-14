@@ -1,25 +1,23 @@
 <p>bookings works!</p>
 
 <div class="email">
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
-    </div>
-    <div>
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required>
-    </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
-    </div>
-    <div>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" formControlName="firstName">
+    <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" formControlName="lastName">
+    <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+    <br>
+        <label for="message">Message:</label>
+        <textarea id="message" formControlName="message"></textarea>
+    <br>
+        <button type="submit">Submit</button>
+      </form>
+    <br>
+      <div *ngIf="submissionStatus">
+        <p>{{ submissionStatus }}</p>
+      </div>
 </div>
-
-
