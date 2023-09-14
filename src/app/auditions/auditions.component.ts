@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AuditionsComponent {
 
+  scrollToSection(sectionId: string): void {
+    document.querySelector('#' + sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  }
+  
 }
