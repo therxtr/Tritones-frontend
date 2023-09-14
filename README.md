@@ -15,14 +15,11 @@ ng generate component photos
 
 ng generate component bookings
 
+
+
 ng generate component contact-us
 
 
 Latest:
-tested connection with backend(member, board)
-
-9/12:
-Home-page almost done
-audition and about us page in progress.
-updated asset.
-updated navigation links.
+complete about us front end back end connection
+about us text display fix.

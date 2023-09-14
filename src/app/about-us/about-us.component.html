@@ -25,13 +25,36 @@
 <div class="navigation-section">
     <h2 class="headline-2">2023-2024 Tritones</h2>
     <div class="button-group">
-        <button class="nav-button sopranos"><p class="body-text">Sopranos</p></button>
-        <button class="nav-button mezzos"><p class="body-text">Mezzos</p></button>
-        <button class="nav-button altos"><p class="body-text">Altos</p></button>
-        <button class="nav-button tenors"><p class="body-text">Tenors</p></button>
-        <button class="nav-button baritones-bass"><p class="body-text">Baritones & Bass</p></button>
+        <button (click)="scrollToSection('sopranos')" class="nav-button sopranos"><p class="body-text">Sopranos</p></button>
+        <button (click)="scrollToSection('mezzos')" class="nav-button mezzos"><p class="body-text">Mezzos</p></button>
+        <button (click)="scrollToSection('altos')" class="nav-button altos"><p class="body-text">Altos</p></button>
+        <button (click)="scrollToSection('tenors')" class="nav-button tenors"><p class="body-text">Tenors</p></button>
+        <button (click)="scrollToSection('baritones-bass')" class="nav-button baritones-bass"><p class="body-text">Baritones & Bass</p></button>
     </div>
 </div>
+
+<div *ngFor="let voicePart of ['sopranos', 'mezzos', 'altos', 'tenors', 'baritonesandbass']">
+    <div [id]="voicePart" class="voice-part">
+        <div class="voice-part-title">{{ getDisplayName(voicePart) | titlecase }}</div>
+        <div class="member-list">
+        <div *ngFor="let member of getMembersByVoicePart(voicePart)" class="member-card">
+          <div class="member-photo" [style.backgroundImage]="'url(' + member.photoUrl + ')'">
+            <div class="overlap-group">
+              <div class="flexcontainer">
+                <p class="text-i">
+                  <span class="text-wrapper">{{ member.name }}<br>{{ member.board }}{{ member.voicePart }},{{ member.number }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
 
 
 
