@@ -18,6 +18,15 @@ h2 {
   line-height: normal;
 }
 
+svg {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.answer {
+  display: none;
+}
+
 .heading {
   display: flex;
   padding: 0px 50px;
@@ -35,6 +44,11 @@ h2 {
   align-self: stretch;
 }
 
+.item {
+  border-radius: 10px;
+  border: 1px solid #E1D8B0;
+}
+
 .question {
   display: flex;
   padding: 20px 50px;
@@ -42,7 +56,4 @@ h2 {
   align-items: center;
   gap: 10px;
   align-self: stretch;
-
-  border-radius: 10px;
-  border: 1px solid #E1D8B0;
 }
