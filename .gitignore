@@ -21,7 +21,7 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -40,6 +40,9 @@ angular.json
 .editorconfig
 package-lock.json
 package.json
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
 
 # System files
 .DS_Store
