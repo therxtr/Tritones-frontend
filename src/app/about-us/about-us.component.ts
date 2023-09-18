@@ -1,5 +1,7 @@
 import { Component, OnInit,Renderer2,ElementRef } from '@angular/core';
 import { MemberService } from '../members.service';
+import { Member } from '../member';
+import { VoicePart } from '../member';
 
 @Component({
   selector: 'app-about-us',
@@ -8,46 +10,42 @@ import { MemberService } from '../members.service';
 })
 
 export class AboutUsComponent implements OnInit {
-  members: any[] = [];
-  boards: any[] = [];
-  sopranos: any[] = [];
-  mezzos: any[] = [];
-  altos: any[] = [];
-  tenors: any[] = [];
-  baritonesAndbass:any[] = [];
-  
+  members: Member[] = [];
+  sopranos: Member[] = [];
+  mezzos: Member[] = [];    
+  altos: Member[] = []; 
+  tenors: Member[] = []; 
+  baritonesAndbass: Member[] = [];
 
   voicePartGroups: { [key: string]: any[] } = {};
 
-  constructor(private memberService: MemberService,private renderer: Renderer2, private el: ElementRef) {}
+  constructor(private memberService: MemberService, private el: ElementRef) {}
 
   ngOnInit(): void {
     this.memberService.getMembers().subscribe((data) => {
       this.members = data;
-      this.sopranos = this.members.filter(member => member.voicePart.toLowerCase().includes('soprano'));
-      this.mezzos = this.members.filter(member => member.voicePart.toLowerCase().includes('mezzo'));
-      this.altos = this.members.filter(member => member.voicePart.toLowerCase().includes('alto'));
-      this.tenors = this.members.filter(member => member.voicePart.toLowerCase().includes('tenor'));
+      this.sopranos = this.members.filter(member => member.voicePart === VoicePart.SOPRANO);
+      this.mezzos = this.members.filter(member => member.voicePart === VoicePart.MEZZO);
+      this.altos = this.members.filter(member => member.voicePart === VoicePart.ALTO);
+      this.tenors = this.members.filter(member => member.voicePart === VoicePart.TENOR);
       this.baritonesAndbass = this.members.filter(member => 
-        member.voicePart.toLowerCase().includes('baritone') || 
-        member.voicePart.toLowerCase().includes('bass')
+        member.voicePart === VoicePart.BARITONE || member.voicePart === VoicePart.BASS
       );
-      
-
+  
+      this.voicePartGroups = {
+        sopranos: this.sopranos,
+        mezzos: this.mezzos,
+        altos: this.altos,
+        tenors: this.tenors,
+        baritonesbass: this.baritonesAndbass
+      };
     });
-
-    this.memberService.getBoards().subscribe((data) => {
-      this.boards = data;
-    });
-
-    this.voicePartGroups = {
-      sopranos: this.sopranos,
-      mezzos: this.mezzos,
-      altos: this.altos,
-      tenors: this.tenors,
-      baritonesbass: this.baritonesAndbass
-    };
   }
+  
+  get voicePartKeys(): string[] {
+    return Object.keys(this.voicePartGroups);
+  }
+  
 
   getMembersByVoicePart(voicePart: string): any[] {
     return this.voicePartGroups[voicePart];

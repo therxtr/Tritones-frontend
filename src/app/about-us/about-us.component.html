@@ -33,25 +33,29 @@
     </div>
 </div>
 
-<div *ngFor="let voicePart of ['sopranos', 'mezzos', 'altos', 'tenors', 'baritonesandbass']">
-    <div [id]="voicePart" class="voice-part">
-        <div class="voice-part-title">{{ getDisplayName(voicePart) | titlecase }}</div>
-        <div class="member-list">
-        <div *ngFor="let member of getMembersByVoicePart(voicePart)" class="member-card">
-          <div class="member-photo" [style.backgroundImage]="'url(' + member.photoUrl + ')'">
-            <div class="overlap-group">
-              <div class="flexcontainer">
-                <p class="text-i">
-                  <span class="text-wrapper">{{ member.name }}<br>{{ member.board }}{{ member.voicePart }},{{ member.number }}</span>
-                </p>
-              </div>
+<div *ngFor="let voicePartKey of voicePartKeys">
+  <div [id]="voicePartKey" class="voice-part">
+    <div class="voice-part-title">{{ getDisplayName(voicePartKey) | titlecase }}</div>
+    <div class="member-list">
+      <div *ngFor="let member of voicePartGroups[voicePartKey]" class="member-card">
+        <div class="member-photo" [style.backgroundImage]="'url(' + member.imageUrl + ')'">
+          <div class="overlap-group">
+            <div class="flexcontainer">
+              <p class="text-i">
+                <span class="text-wrapper">
+                  {{ member.name }}<br>
+                  {{ member.board ? member.board + ', ' : ''}}{{ member.voicePart }}, {{ member.number }}
+                </span>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
+
+
   
   
   
