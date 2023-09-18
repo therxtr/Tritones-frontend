@@ -18,7 +18,10 @@ ng generate component bookings
 ng generate component contact-us
 
 
-Latest(9/14):
+Latest(9/17):
+added spotify in home, fixed style in home, tablet flow and mobile flow for about us and auditions complete.
+
+9/14:
 auditions page content added, 
 needs FAQ, 
 where apply map to?
