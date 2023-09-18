@@ -18,7 +18,10 @@ ng generate component bookings
 ng generate component contact-us
 
 
-Latest(9/17):
+Latest(9/18):
+home, and about us front to back connection complete.
+
+9/17:
 added spotify in home, fixed style in home, tablet flow and mobile flow for about us and auditions complete.
 
 9/14:
