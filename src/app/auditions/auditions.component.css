@@ -1,6 +1,9 @@
+.subheadline-1{
+  color: #E1D8B0;
+}
+
 .container {
-  display: flex;
-  flex-direction: row;
+
 }
 
 .sidebar {
@@ -16,6 +19,9 @@
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
+.tabs{
+  display: none;
+}
   
 .sidebar-option {
   margin-bottom: 20px; /* Adds some space between the options */
@@ -35,11 +41,58 @@
 .apply-now-button:hover {
   background-color: #305060; /* Changes the background color when hovering over the button */
 }
+@media (max-width: 768px) {
+  .container {
+
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .content-block {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 1; /* to keep it above other elements */
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px; /* optional: for some inner spacing */
+  }
+  
+  .tab-option {
+    cursor: pointer;
+    padding: 10px; /* optional: for some spacing around tabs */
+    transition: transform 0.3s ease; /* for smooth animation */
+  }
+  
+  .tab-option:active {
+    transform: scale(0.95); /* for click animation */
+  }
+  
+  .tab-option.active {
+    font-weight: bold; /* optional: to highlight the active tab */
+    border-bottom: 2px solid #000; /* optional: to add a bottom border to the active tab */
+  }
+
+}
+
 .main-section {
   margin-left: 25%; /* Adjusts the main section to not get overlapped by the sidebar */
   width: 74%; /* Set the width of the main section to 75% of the container */
   padding: 20px;
   box-sizing: border-box;
+}
+
+@media(max-width:768px) {
+  .main-section {
+    margin-left: 0; /* Reset the margin */
+    width: 100%; /* Set width to 100% for smaller screens */
+  }
 }
 
 
@@ -93,3 +146,29 @@
 }
 
 
+
+
+@media (max-width: 768px) {
+  .headline-1{
+    font-size: 40px;
+  }
+  .subheadline-1{
+    font-size: 32px;
+  }
+  .body-text{
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .headline-1{
+    font-size: 30px;
+  }
+  .subheadline-1{
+    font-size: 22px;
+  }
+  .body-text{
+    font-size: 18px;
+  }
+}

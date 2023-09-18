@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   isDarkTheme!: Observable<boolean>;
   isMobileNavOpen = false;
   logoSrc!: string;
-
+  
   constructor(private themeService: ThemeService) {}
   
   ngOnInit() {

@@ -1,10 +1,21 @@
 <div class="container">
+
   <div class="sidebar">
     <div class="sidebar-option body-text" (click)="scrollToSection('overview')">Overview</div>
     <div class="sidebar-option body-text" (click)="scrollToSection('audition-information')">Audition Information</div>
     <div class="sidebar-option body-text" (click)="scrollToSection('faq')">FAQ</div>
     <button class="apply-now-button body-text">Apply Now</button>
   </div>
+
+  <div class="content-block">
+    <div class="tabs">
+      <div class="tab-option body-text" (click)="scrollToSection('overview')">Overview</div>
+      <div class="tab-option body-text" (click)="scrollToSection('audition-information')">Audition Information</div>
+      <div class="tab-option body-text" (click)="scrollToSection('faq')">FAQ</div>
+      <div class="tab-option body-text">Apply Now</div>
+    </div>
+  </div>
+  
   
 
   <div class="main-section">
@@ -51,4 +62,6 @@
     <div class="buttons"><button class="button"><p class="body-text">Apply now</p></button></div>
     <h1 class="headline-1" id="faq">FAQ</h1>
   </div>
+
+
 </div>

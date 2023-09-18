@@ -17,13 +17,16 @@
 <section class="our-music">
   <div class="content-block">
     <h2 class="subheadline-1">Our music</h2>
-    <div class="albums">
-      <div class="album body-class">Cotline Bling<br>2017</div>
-      <div class="album body-class">Carry On<br>2015</div>
-      <div class="album body-class">Someone Like You<br>2013</div>
-      <div class="album body-class">Teenage Dream<br>2011</div>
-      <div class="album body-class">Jealous<br>2018</div>
+      <div class="album-grid">
+        <div *ngFor="let track of tracks" class="album-card">
+          <img [src]="track.image_url" alt="{{ track.name }} album cover" class="album-cover">
+          <div class="album-details">
+            <p class="album-title">{{ track.name }}</p>
+            <p class="album-year">{{ track.release_year }}</p>
+          </div>
+        </div>
     </div>
+
     <button pButton type="button" class="discover-button body">
       Discover more
     </button>

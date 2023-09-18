@@ -106,9 +106,8 @@ body, html {
   }
   
   .text-content {
-    flex: 1;
-    background: linear-gradient(to left, var(--background-color-dark), transparent 25%);
     display: flex;
+    /* background: linear-gradient(to right, var(--background-color-dark), transparent 75%); */
     flex-direction: column;
     justify-content: center;
     padding-left: 2%; /* Adjust as necessary */
@@ -149,7 +148,7 @@ body, html {
   
   .content-block {
     width: 1000px; /* Adjust as necessary */
-    height: 500px; /* Adjust as necessary */
+    height: 600px; /* Adjust as necessary */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,22 +159,44 @@ body, html {
     margin-top: 30px;
   }
   
-  .albums {
+  .album-grid {
+    width: 1000px;
+    height: 400px;
     display: flex;
-    gap: 60px; /* Increase the gap between albums */
-    justify-content: center;
+    overflow-x: scroll;
+    gap: 16px;
+    white-space: nowrap;
   }
   
-  .album {
-    width: 100px; /* Adjust as necessary */
-    height: 100px; /* Adjust as necessary */
-    background-color: var(--background-color-light); /* Adjust as necessary */
-    display: flex;
-    color: var(--text-color-dark);
-    align-items: center;
-    justify-content: center;
+  .album-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 70%;
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .album-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .album-details {
     text-align: center;
   }
+  
+  .album-title {
+    font-weight: bold;
+  }
+  
+  .album-year {
+    color: #666;
+  }
+  
+  
   
   .discover-button {
     width: 325px;

@@ -22,7 +22,7 @@ export class AboutUsComponent implements OnInit {
   constructor(private memberService: MemberService,private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
-    this.memberService.getProducts().subscribe((data) => {
+    this.memberService.getMembers().subscribe((data) => {
       this.members = data;
       this.sopranos = this.members.filter(member => member.voicePart.toLowerCase().includes('soprano'));
       this.mezzos = this.members.filter(member => member.voicePart.toLowerCase().includes('mezzo'));
@@ -33,18 +33,20 @@ export class AboutUsComponent implements OnInit {
         member.voicePart.toLowerCase().includes('bass')
       );
       
-      this.voicePartGroups = {
-        sopranos: this.sopranos,
-        mezzos: this.mezzos,
-        altos: this.altos,
-        tenors: this.tenors,
-        baritonesbass: this.baritonesAndbass
-      };
+
     });
 
-    this.memberService.getOrders().subscribe((data) => {
+    this.memberService.getBoards().subscribe((data) => {
       this.boards = data;
     });
+
+    this.voicePartGroups = {
+      sopranos: this.sopranos,
+      mezzos: this.mezzos,
+      altos: this.altos,
+      tenors: this.tenors,
+      baritonesbass: this.baritonesAndbass
+    };
   }
 
   getMembersByVoicePart(voicePart: string): any[] {
