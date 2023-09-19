@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FaqComponent } from '../faq/faq.component';
 
 @Component({
   selector: 'app-auditions',
@@ -12,7 +13,7 @@ export class AuditionsComponent {
     document.querySelectorAll('.tab-option').forEach(tab => {
       tab.classList.remove('active');
     });
-  
+
     // add active class to the clicked tab
     document.querySelector(`.tab-option[click*="${sectionId}"]`)?.classList.add('active');
 
@@ -23,7 +24,7 @@ export class AuditionsComponent {
     }
 }
 
-  
-  
+
+
 }
 
