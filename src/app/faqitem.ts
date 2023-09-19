@@ -1,5 +1,6 @@
 export interface Faqitem {
   question: string,
   answer: string,
-  isOpen: boolean
+  isOpen: boolean,
+  iconPathData: string
 }
