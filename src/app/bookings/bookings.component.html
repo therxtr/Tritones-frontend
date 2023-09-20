@@ -1,21 +1,26 @@
-<div class="email">
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+<div class="form-container" [hidden]="!showForm">
+  <h1 class="heading">Love what we do? Send us an inquiry</h1>
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate class="booking-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" class="form-control" [(ngModel)]="formData.name" required>
     </div>
-    <div>
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="formData.email" required>
     </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" class="form-control" [(ngModel)]="formData.subject" required>
     </div>
-    <div>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" class="form-control" [(ngModel)]="formData.message" required></textarea>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-primary">Send</button>
   </form>
 </div>
+
+<div id="space"></div>
+
+<button class="btn-scroll" [class.btn-scroll-hidden]="!showScrollButton"><span class="scroll-txt" (click)="toggleFormVisibility()">Book Now</span></button>

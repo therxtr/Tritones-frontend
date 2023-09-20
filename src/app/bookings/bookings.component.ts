@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../contact.service'; // Import the service
 import { catchError } from 'rxjs/operators';
@@ -19,6 +19,8 @@ export class BookingsComponent {
     message: ''
   };
 
+  showForm = false;
+  showScrollButton = false;
 
   constructor(private http: HttpClient) {}
 
@@ -26,14 +28,26 @@ export class BookingsComponent {
     console.log('onSubmit function called');
     console.log(this.formData)
     this.http.post('http://127.0.0.1:8000/contactData/', this.formData).subscribe(
-        (response) => {
-          console.log('Form submitted successfully', response);
-          // Handle success (e.g., show a success message)
-        },
-        (error) => {
-          console.error('Form submission error', error);
-          // Handle error (e.g., display an error message)
-        }
+      (response) => {
+        console.log('Form submitted successfully', response);
+        // Handle success (e.g., show a success message)
+      },
+      (error) => {
+        console.error('Form submission error', error);
+        // Handle error (e.g., display an error message)
+      }
       );
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const scrollPosition = window.scrollY;
+    const scrollTopThreshold = 0;           // adjust this to the starting point at which you want to see the button
+    const scrollBottomThreshold = 10000;    // bottom cutoff
+    this.showScrollButton = scrollPosition >= scrollTopThreshold && scrollPosition <= scrollBottomThreshold;
+  }
+
+  toggleFormVisibility() {
+    this.showForm = !this.showForm;
   }
 }
