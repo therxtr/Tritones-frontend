@@ -1,22 +1,35 @@
 #space {
-  height: 100000px;
+  height: 6000px;
 }
 
+/* what i want initially */
+.hidden-container {
+  display: none;
+}
+
+/* what i want when it is displayed */
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   padding-top: 33px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 35px;
 
   width: 637.806px;
-  /* height: 872px; */
+  height: 872px;
 
   border-radius: 8.305px;
   background: #40667D;
+
+  z-index: 1000;
 }
 
 .heading {
@@ -96,22 +109,17 @@ label {
   border: 0.83px solid #222227;
 }
 
-.btn-scroll-hidden {
-  display: none;
-}
-
 .btn-scroll {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  /* display: flex; */
   width: 119px;
   height: 117px;
   padding: 24px 61px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 
   border-radius: 100px;
   border: 1px solid #F9F6EF;

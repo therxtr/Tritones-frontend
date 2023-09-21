@@ -1,4 +1,4 @@
-<div class="form-container" [hidden]="!showForm">
+<div [ngClass]="{'hidden-container': !showFormFlag, 'form-container': showFormFlag}">
   <h1 class="heading">Love what we do? Send us an inquiry</h1>
   <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate class="booking-form">
     <div class="form-group">
@@ -23,4 +23,13 @@
 
 <div id="space"></div>
 
-<button class="btn-scroll" [class.btn-scroll-hidden]="!showScrollButton"><span class="scroll-txt" (click)="toggleFormVisibility()">Book Now</span></button>
+<button class="btn-scroll" (click)="toggleForm()">
+  <ng-container *ngIf="showBookNow; else x">
+    <span class="scroll-txt">Book Now</span>
+  </ng-container>
+  <ng-template #x>
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="#F2EFE9">
+      <path d="M4.7 42.5L0.5 38.3L17.3 21.5L0.5 4.7L4.7 0.5L21.5 17.3L38.3 0.5L42.5 4.7L25.7 21.5L42.5 38.3L38.3 42.5L21.5 25.7L4.7 42.5Z" fill="#F2EFE9"/>
+    </svg>
+  </ng-template>
+</button>

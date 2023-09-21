@@ -19,8 +19,9 @@ export class BookingsComponent {
     message: ''
   };
 
-  showForm = false;
-  showScrollButton = false;
+  showFormFlag = false;
+  showScrollButton = false
+  showBookNow = true;
 
   constructor(private http: HttpClient) {}
 
@@ -36,18 +37,19 @@ export class BookingsComponent {
         console.error('Form submission error', error);
         // Handle error (e.g., display an error message)
       }
-      );
+    );
   }
 
-  @HostListener('window:scroll', ['$event'])
+  toggleForm() {
+    this.showFormFlag = !this.showFormFlag;
+    this.showBookNow = !this.showBookNow;
+  }
+
+  @HostListener('window:scroll', [])
   checkScroll() {
     const scrollPosition = window.scrollY;
-    const scrollTopThreshold = 0;           // adjust this to the starting point at which you want to see the button
-    const scrollBottomThreshold = 10000;    // bottom cutoff
+    const scrollTopThreshold = 2000;           // adjust this to the starting point at which you want to see the button
+    const scrollBottomThreshold = 4000;        // bottom cutoff
     this.showScrollButton = scrollPosition >= scrollTopThreshold && scrollPosition <= scrollBottomThreshold;
-  }
-
-  toggleFormVisibility() {
-    this.showForm = !this.showForm;
   }
 }
