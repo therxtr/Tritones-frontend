@@ -1,0 +1,142 @@
+.hidden-container {
+  display: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding-top: 33px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+
+  width: 637.806px;
+  height: 872px;
+
+  border-radius: 8.305px;
+  background: #40667D;
+
+  z-index: 1000;
+}
+
+.heading {
+  color: #F9F6EF;
+  font-family: Fraunces;
+  font-size: 33.219px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 547.284px;
+}
+
+.form-group {
+  text-align: left;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 17px;
+  height: 19.101px;
+  flex-shrink: 0;
+
+  color: #FFF;
+  font-family: Syne;
+  font-size: 19.931px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-control {
+  width: 100%;
+  height: 50.659px;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 8.305px;
+  background: #F9F6EF;
+  border: none;
+}
+
+#message {
+  height: 199.314px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-self: center;
+  padding: 19.931px 50.659px;
+  justify-content: center;
+  border-radius: 16.61px;
+  border: 0.83px solid #F9F6EF;
+  color: #F9F6EF;
+  cursor: pointer;
+  width: 160px;
+
+  color: #F9F6EF;
+  background: #40667D;
+  font-family: Syne;
+  font-size: 26.575px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-primary:hover {
+  background: #222227;
+  border: 0.83px solid #222227;
+}
+
+.btn-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 119px;
+  height: 117px;
+  padding: 24px 61px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100px;
+  border: 1px solid #F9F6EF;
+  background: #40667D;
+  box-shadow: 0px 4px 4px 0px rgba(34, 34, 39, 0.25);
+
+  color: #F2EFE9;
+  text-align: center;
+  font-family: Syne;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.btn-scroll:hover {
+  background: #164561;
+}
+
+.scroll-txt {
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 100%;
+}

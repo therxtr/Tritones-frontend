@@ -1,21 +1,35 @@
-<div class="email">
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+<div [ngClass]="{'hidden-container': !showFormFlag, 'form-container': showFormFlag}">
+  <h1 class="heading">Love what we do? Send us an inquiry</h1>
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate class="booking-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" class="form-control" [(ngModel)]="formData.name" required>
     </div>
-    <div>
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="formData.email" required>
     </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" class="form-control" [(ngModel)]="formData.subject" required>
     </div>
-    <div>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" class="form-control" [(ngModel)]="formData.message" required></textarea>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-primary">Send</button>
   </form>
 </div>
+
+<div id="space"></div>
+
+<button class="btn-scroll" (click)="toggleForm()">
+  <ng-container *ngIf="showBookNow; else x">
+    <span class="scroll-txt">Book Now</span>
+  </ng-container>
+  <ng-template #x>
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="#F2EFE9">
+      <path d="M4.7 42.5L0.5 38.3L17.3 21.5L0.5 4.7L4.7 0.5L21.5 17.3L38.3 0.5L42.5 4.7L25.7 21.5L42.5 38.3L38.3 42.5L21.5 25.7L4.7 42.5Z" fill="#F2EFE9"/>
+    </svg>
+  </ng-template>
+</button>
