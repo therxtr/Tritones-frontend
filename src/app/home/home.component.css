@@ -1,366 +1,170 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .body-text {
-    font-size: 24px; 
-  }
-  
-  @media (max-width: 768px) {
-    .intro {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .photo-container {
-      
-      width: 768px; /* Set the width for the tablet view */
-      height: 473px;
-    }
-  
-    .photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Changed to cover to crop the image */
-    }
-  
-    .text-content {
-      padding-left: 0;
-      background: none;
-    }
-  
-    .intro h1 {
-      font-size: 40px; /* Adjust the font size for h1 in tablet view */
-    }
-  
-    .intro .body-text {
-      font-size: 25px; /* Adjust the font size for body text in tablet view */
-    }
-  
-    .join-button {
-      align-self: center; /* Align the button in the center */
-    }
-  }
+@import url("../../styles.css");
 
-  @media (max-width: 480px) {
-    .intro {
-      flex-direction: column;
-      align-items: left;
-      text-align: left;
-    }
-    .photo-container {
-      width: 480px; /* Set the width for the mobile view */
-      height: 260px; /* Set the height for the mobile view */
-    }
-  
-    .intro h1 {
-      font-size: 24px; /* Set the h1 font size for the mobile view */
-    }
-  
-    .intro .body-text {
-      font-size: 20px; /* Set the body text size for the mobile view */
-    }
-  
-    .join-button {
-      width: 113px; /* Set the button width for the mobile view */
-      height: 44px; /* Set the button height for the mobile view */
-    }
-  
-    .our-music h2 {
-      font-size: 22px; /* Set the h2 font size in the "Our Music" section for the mobile view */
-    }
-  
-    .our-music .body-text {
-      font-size: 18px; /* Set the body text size in the "Our Music" section for the mobile view */
-    }
-  
-    .discover-button {
-      width: 176px; /* Set the button width in the "Our Music" section for the mobile view */
-      height: 44px; /* Set the button height in the "Our Music" section for the mobile view */
-    }
-  }
-  
-  
-  
-  .intro {
-    display: flex;
-    width: 100%;
-    height: auto; /* Adjust as necessary */
-  }
+.intro {
+  padding-bottom: 32px ;
+}
 
-  
-  
-  .photo-container {
-    position: relative;
-    width: 960px; /* 960 / 1440 */
-    height: 721px;
-  }
-  
-  .photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .text-content {
-    display: flex;
-    /* background: linear-gradient(to right, var(--background-color-dark), transparent 75%); */
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 2%; /* Adjust as necessary */
-  }
-  
-  .join-button {
-    width: 221px; /* Adjust as necessary */
-    height: 86px; /* Adjust as necessary */
-    padding: 24px 61px; /* Adjust as necessary */
-    border-radius: 20px; /* Adjust as necessary */
-    background-color: #40667D; /* Adjust as necessary */
-    color: var(--text-color-dark); /* Adjust as necessary */
-    border: none; /* Remove default button border */
-    font-size: 24px; /* Adjust as necessary to match your typography settings */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    top: 526px; /* Adjust as necessary */
-    left: 1054px; /* Adjust as necessary */
-    transition: transform 0.3s; /* Add transition for click animation */
-  }
-  
-  .join-button:active {
-    transform: scale(0.95); /* Add scale transformation for click animation */
-  }
-  @media (max-width: 480px) {
-    .our-music h2{
-    font-size: 22px;
-    }
-    .discover-button{
-      font-size: 18px;
-    }
-  }
+.background-img {
+  width: 100%;
+  min-height: 259px;
+}
 
-  .our-music {
-    display: flex;
-    justify-content: center;
-    padding: 30px 20px;
-  }
-  
-  .content-block {
-    width: 1000px; /* Adjust as necessary */
-    height: 600px; /* Adjust as necessary */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 30px 20px;
-    background-color: #343437; /* Set the background color to match the dark theme */
-    border-radius: 10px; /* Maintain the border-radius */
-    margin-top: 30px;
-  }
-  
-  .album-grid {
-    width: 1000px;
-    height: 400px;
-    display: flex;
-    overflow-x: scroll;
-    gap: 16px;
-    white-space: nowrap;
-  }
-  
-  .album-card {
-    flex: 0 0 auto;
-    width: 200px;
-    height: 70%;
-    border: 1px solid #ccc;
-    padding: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .album-cover {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .album-details {
-    text-align: center;
-  }
-  
-  .album-title {
-    font-weight: bold;
-  }
-  
-  .album-year {
-    color: #666;
-  }
-  
-  
-  
-  .discover-button {
-    width: 325px;
-    height: 86px;
-    padding: 24px 61px;
-    border-radius: 20px;
-    border: 1px solid var(--background-color-light); /* Adjust as necessary */
-    color: var(--text-color-dark); /* Adjust as necessary */
-    background-color: transparent; /* Set background color to transparent */
-    margin-top: 30px;
-    font-size: 24px; /* Set the font size to match the body text size */
-    transition: transform 0.3s; /* Add transition for click animation */
-  }
-  
-  .discover-button:active {
-    transform: scale(0.95); /* Add scale transformation for click animation */
-  }
-  
-  @media (max-width: 768px) {
-    .transition {
-      flex-direction: column-reverse;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .text-content {
-      max-width: none;
-      gap: 10px;
-    }
+#intro-image {
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(22,22,27, 1)), linear-gradient(to bottom, rgba(0,0,0,0), rgba(22, 22, 27, 1)), url("../../assets/images/home-page/home-Intro.png");
+  background-size: cover;
+}
 
-    .transition-button {
-      align-self: center;
-    }
+.text-content {
+  align-items: center;
+  gap: 13px;
+}
 
-    
+.home-shadow {
+  box-shadow: 0px 0px 5px 15px var(--background-color-dark);
+}
 
-  }
+#premier {
+  text-align: left;
+  align-self: left;
+  width: 358px;
+  font-size: 32px;
+}
 
-  @media (max-width: 480px) {
-  
-    .transition-image {
-      width: 394px;
-      height: 295px;
-    }
-  
-    .transition h1 {
-      font-size: 22px;
-    }
-  
-    .transition .body-text {
-      font-size: 18px;
-    }
-  
-    .transition-button {
-      width: 141px;
-      height: 44px;
-    }
-  }
-  
-  
-  .transition {
-    display: flex;
-  }
-  
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Adjust as necessary to create reasonable space between elements */
-    max-width: 600px; /* Adjust as necessary to create reasonable space beside the image */
-  }
-  
-  .transition-image {
-    width: 596px;
-    height: 446px;
-    border-radius: 10px; /* Optional: to add rounded corners to the image */
-  }
-  
-  .transition-button {
-    width: 261px;
-    height: 86px;
-    padding: 24px 61px;
-    border-radius: 20px;
-    background-color: #40667D;
-    color: var(--text-color-dark);
-    border: none;
-    margin-bottom: 20px;
-    transition: transform 0.3s;
-    font-size: 24px; /* Set the font size to match the body text size */
-  }
-  
-  .transition-button:active {
-    transform: scale(0.95);
-  }
-  
-  @media (max-width: 768px) {
+#diverse {
+  text-align: left;
+  align-self: left;
+  width: 344px;
+  font-size: 20px;
+  font-weight: 400;
+}
 
-    .end h1 {
-      font-size: 40px; /* Adjust the font size for h1 in tablet view */
-    }
-  
-    .end .body-text {
-      font-size: 24px; /* Adjust the font size for body text in tablet view */
-    }
-  }
-  
-  @media (max-width: 480px) {
-  
-    .end h1 {
-      font-size: 22px;
-    }
-  
-    .end .body-text {
-      font-size: 18px;
-    }
-  
-    .end-button {
-      width: 196px;
-      height: 57px;
-    }
-  }
-  
-  .end {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    background-color: #164561;
-  }
-  
-  .end-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px; /* Adjust as necessary to create reasonable space between elements */
-  }
-  
-  .end-button {
-    width: 325px; /* Adjust as necessary */
-    height: 86px; /* Adjust as necessary */
-    padding: 24px 61px; /* Adjust as necessary */
-    border-radius: 20px; /* Adjust as necessary */
-    border: 1px solid var(--background-color-light); /* Adjust as necessary */
-    color:var(--background-color-light);
-    background-color: transparent; /* Set background color to transparent */
-    transition: transform 0.3s; /* Add transition for click animation */
-    font-size: 24px; /* Set the font size to match the body text size */
-  }
-  
-  .end-button:active {
-    transform: scale(0.95); /* Add scale transformation for click animation */
-  }
+#join {
+  width: 113px;
+  height: 44px;
+  border-radius: 15px;
+  padding: 0 0;
+  font-size: 16px;
+}
 
-  
+.our-music {
+  background: var(--background-color-gray);
+  border-radius: 10px;
+}
 
-  
-  
+.content-block {
+  align-items: center;
+}
 
-  
-  
+.content-block h2 {
+  line-height: 22px;
+  padding-top: 21px;
+  padding-bottom: 13px;
+}
 
-  
-  
-  
-  
+.album-grid {
+  display: flex;
+  width: 100%;
+  height: 252px;
+  gap: 23px;
+  align-content: space-between;
+  overflow-x: auto;
+  padding: 21px 26px;
+}
 
-  
+.album-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.album-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.album-cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid var(--background-color-dark);
+  background: lightgray 50% / cover no-repeat;
+}
+
+.album-title {
+  align-self: stretch;
+  font-family: Syne;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.album-year {
+  font-family: Syne;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#discover {
+  margin: 30px 108px;
+  width: 176px;
+  height: 44px;
+  font-size: 18px;
+}
+
+.transition {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 34px;
+}
+
+#transition-image {
+  background: linear-gradient(to top, rgba(22,22,27 , 1), transparent, rgba(22,22,27, 1)), url("../../assets/images/home-page/transition.png");
+  background-size: cover;
+}
+
+#transition-flex {
+  gap: 20px;
+}
+
+#perform {
+  text-align: center;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+.body-text {
+  text-align: center;
+}
+
+#book {
+  width: 141px;
+  height: 44px;
+}
+
+.end {
+  background: var(--background-color-navy);
+  padding: 50px 20px;
+}
+
+.end-content {
+  text-align: center;
+  gap: 43px;
+}
+
+#recruit-heading {
+  margin: 0 auto;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#btn-end {
+  display: block;
+  margin: 0 auto;
+  padding: 24px 61px;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
