@@ -1,13 +1,7 @@
-#space {
-  height: 6000px;
-}
-
-/* what i want initially */
 .hidden-container {
   display: none;
 }
 
-/* what i want when it is displayed */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -117,7 +111,6 @@ label {
   width: 119px;
   height: 117px;
   padding: 24px 61px;
-  display: inline-flex;
   justify-content: center;
   align-items: center;
 
