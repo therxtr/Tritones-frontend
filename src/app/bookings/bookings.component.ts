@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../contact.service'; // Import the service
 import { catchError } from 'rxjs/operators';
@@ -25,6 +25,9 @@ export class BookingsComponent implements OnInit{
     message: ''
   };
 
+  showFormFlag = false;
+  showScrollButton = false
+  showBookNow = true;
 
   constructor(private http: HttpClient) {}
 
@@ -53,14 +56,27 @@ export class BookingsComponent implements OnInit{
     console.log('onSubmit function called');
     console.log(this.formData)
     this.http.post('http://127.0.0.1:8000/contactData/', this.formData).subscribe(
-        (response) => {
-          console.log('Form submitted successfully', response);
-          // Handle success (e.g., show a success message)
-        },
-        (error) => {
-          console.error('Form submission error', error);
-          // Handle error (e.g., display an error message)
-        }
-      );
+      (response) => {
+        console.log('Form submitted successfully', response);
+        // Handle success (e.g., show a success message)
+      },
+      (error) => {
+        console.error('Form submission error', error);
+        // Handle error (e.g., display an error message)
+      }
+    );
+  }
+
+  toggleForm() {
+    this.showFormFlag = !this.showFormFlag;
+    this.showBookNow = !this.showBookNow;
+  }
+
+  @HostListener('window:scroll', [])
+  checkScroll() {
+    const scrollPosition = window.scrollY;
+    const scrollTopThreshold = 2000;           // adjust this to the starting point at which you want to see the button
+    const scrollBottomThreshold = 4000;        // bottom cutoff
+    this.showScrollButton = scrollPosition >= scrollTopThreshold && scrollPosition <= scrollBottomThreshold;
   }
 }

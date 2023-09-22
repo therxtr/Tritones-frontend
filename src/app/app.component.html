@@ -6,21 +6,23 @@
     <div class="burger-menu material-symbols-outlined" (click)="toggleMobileNav()">☰</div>
     <div class="nav-container">
       <nav class="nav-desktop">
-        <a routerLink="/" class="body-text">Home</a>
-        <a routerLink="/about-us" class="body-text">About Us</a>
+        <!-- <a routerLink="/" class="body-text">Home</a> -->
+        <a routerLink="/about-us" class="body-text">Members</a>
         <a routerLink="/auditions" class="body-text">Auditions</a>
         <a routerLink="/photos" class="body-text">Photos</a>
         <a routerLink="/bookings" class="body-text">Bookings</a>
-        <a routerLink="/contact-us" class="body-text">Contact Us</a>
+        <!-- <a routerLink="/contact-us" class="body-text">Contact Us</a> -->
       </nav>
 
       <nav class="nav-mobile" [class.open]="isMobileNavOpen">
+
         <a routerLink="/" class="body-text" (click)="closeMobileNav()">Home</a>
         <a routerLink="/about-us" class="body-text" (click)="closeMobileNav()">About Us</a>
         <a routerLink="/auditions" class="body-text" (click)="closeMobileNav()">Auditions</a>
         <a routerLink="/photos" class="body-text" (click)="closeMobileNav()">Photos</a>
         <a routerLink="/bookings" class="body-text" (click)="closeMobileNav()">Bookings</a>
         <a routerLink="/contact-us" class="body-text" (click)="closeMobileNav()">Contact Us</a>
+
       </nav>
       
 
@@ -34,10 +36,10 @@
 
 <footer class="footer">
 
-    <div class="footer-column">
+    <div class="footer-column flex-column">
       <h1 class="headline-1">The Tritones</h1>
       <p class="subheadline-1">UC San Diego's premier co-ed<br>a capella group - est.1996.</p>
-      <div class="footer-column tablet">
+      <div class="footer-column flex-column">
         <p class="body-text">tritones@ucsd.edu↗</p>
         <div class="social-icons">
           <a href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar" target="_blank"><img src="assets/images/social logo/spotifylogo.svg" alt="spotifylogo" class="socialLogo"></a>
@@ -47,7 +49,8 @@
         </div>
       </div>
     </div>
-    <div class="footer-column desktop">
+    
+    <div class="footer-column flex-column">
       <p class="subheadline-1" style="color:#E1D8B0;">Connect with Us</p>
       <p class="body-text">tritones@ucsd.edu↗</p>
       <div class="social-icons">
@@ -58,18 +61,18 @@
       </div>
     </div>
 
-    <div class="footer-column">
+    <div class="footer-column flex-column">
       <p class="subheadline-1">Our Events</p>
       <p class="body-text">Bookings</p>
       <p class="body-text">Photos</p>
     </div>
-    <div class="footer-column">
+    <div class="footer-column flex-column">
       <p class="subheadline-1">Get Involved</p>
       <p class="body-text">About Us</p>
       <p class="body-text">Auditions</p>
     </div>
 
 
-  
-  
+
+
 </footer>
