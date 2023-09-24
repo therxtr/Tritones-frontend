@@ -21,6 +21,7 @@ body {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
   transition: background-color 0.3s, color 0.3s;
+  width: 100vw;
 }
 
 body.dark {
