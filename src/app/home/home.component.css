@@ -69,14 +69,14 @@
     position: absolute;
     top: 103px;
     right: 0;
-    transform: translate();
     width: 397px;
     align-items: flex-start;
     gap: 30px;
   }
 
   #premier {
-    font-size: 45px;
+    width: 100%;
+    font-size: 56px;
     font-style: normal;
     text-align: left;
   }
@@ -90,18 +90,39 @@
     border-radius: 20px;
     width: 202px;
     height: auto;
-    padding: 24px 61px;
+    padding: 24px 55px;
   }
 
   #join p {
     font-size: 22px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #premier-container {
+    width: 534px;
+  }
+
+  #premier {
+    height: 206px;
+    width: 434px;
+    font-style: normal;
+    text-align: left;
+  }
+
+  #join {
+    width: 221px;
+  }
+
+  #join p {
+    font-size: 28px;
   }
 }
 /* END of INTRO */
 
 
 /* START of OUR MUSIC */
-.our-music {
+#music-content {
   background: var(--background-color-gray);
   border-radius: 10px;
 }
@@ -206,6 +227,48 @@
     font-size: 24px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .our-music {
+    height: 552px;
+  }
+
+  #music-content {
+    max-width: 1145px;
+    margin: 0 auto;
+  }
+
+  #music-heading {
+    font-size: 40px;
+  }
+
+  .album-grid {
+    height: 337px;
+  }
+
+  .album-card {
+    height: 295px;
+    width: 200px;
+  }
+
+  .album-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  .album-title {
+    font-size: 24px;
+  }
+
+  .album-year {
+    font-size: 24px;
+  }
+
+  #discover {
+    width: 255px;
+    height: 69px;
+    font-size: 24px;
+  }
+}
 /* END of OUR MUSIC */
 
 
@@ -216,9 +279,11 @@
   padding-bottom: 34px;
 }
 
-#transition-image {
-  background: linear-gradient(to top, rgba(22,22,27 , 1), transparent, rgba(22,22,27, 1)), url("../../assets/images/home-page/transition.png");
-  background-size: cover;
+@media screen and (max-width: 768px) {
+  #transition-image {
+    background: linear-gradient(to top, rgba(22, 22, 27, 1), transparent, rgba(22, 22, 27, 1)), url("../../assets/images/home-page/transition.png");
+    background-size: cover;
+  }
 }
 
 #transition-flex {
@@ -242,6 +307,7 @@
 
 @media screen and (min-width: 769px) {
   .transition {
+    height: 446px;
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 63px;
@@ -249,8 +315,11 @@
   }
 
   #transition-image {
+    background: url("../../assets/images/home-page/transition.png");
+    background-size: cover;
     max-width: 543px;
   }
+
   #transition-row {
     flex-direction: row-reverse;
     gap: 26px;

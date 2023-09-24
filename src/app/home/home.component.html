@@ -11,7 +11,7 @@
     </div>
   </section>
   <section class="our-music">
-    <div class="flex-column content-block">
+    <div class="flex-column content-block" id="music-content">
       <h2 class="subheadline-2" id="music-heading">Our music</h2>
         <div class="album-grid">
           <div *ngFor="let track of tracks" class="album-card">
@@ -28,9 +28,9 @@
     </div>
   </section>
   <section class="transition flex-column" id="transition-row">
-    <div class="background-img" id="transition-image">
+    <div class="background-img no-shadow" id="transition-image">
     </div>
-    <div class="text-content flex-column home-shadow no-shadow" id="transition-flex">
+    <div class="text-content flex-column home-shadow" id="transition-flex">
       <h1 class="headline-1" id="perform">We love to perform- <br> no matter the occasion</h1>
       <p class="caption-text body-text">Whether it’s performing on TV, entertaining for community events, or getting dressed up for your formal occasion, we bring award-winning performances wherever we go.</p>
       <button pButton type="button" class="btn btn-primary" id="book" routerLink="/bookings" ><p>Book now</p></button>

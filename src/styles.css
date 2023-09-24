@@ -99,6 +99,7 @@ footer {
   font-family: 'Syne', sans-serif;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .btn-primary {
