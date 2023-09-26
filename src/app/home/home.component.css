@@ -1,7 +1,10 @@
 @import url("../../styles.css");
 
+
+/* START of INTRO */
 .intro {
   padding-bottom: 32px ;
+  width: 100%;
 }
 
 .background-img {
@@ -105,7 +108,80 @@
   font-size: 16px;
 }
 
-.our-music {
+@media screen and (min-width: 769px) {
+  .intro {
+    position: relative;
+    height: 721px;
+    padding-bottom: 0;
+  }
+
+  #intro-image {
+    height: 100%;
+    background-size: cover;
+  }
+
+  .no-shadow {
+    box-shadow: 0 0 0 0;
+  }
+
+  #premier-container {
+    position: absolute;
+    top: 103px;
+    right: 0;
+    width: 397px;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  #premier {
+    width: 100%;
+    font-size: 56px;
+    font-style: normal;
+    text-align: left;
+  }
+
+  #diverse {
+    font-size: 32px;
+  }
+
+  #join {
+    align-self: center;
+    border-radius: 20px;
+    width: 202px;
+    height: auto;
+    padding: 24px 55px;
+  }
+
+  #join p {
+    font-size: 22px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #premier-container {
+    width: 534px;
+  }
+
+  #premier {
+    height: 206px;
+    width: 434px;
+    font-style: normal;
+    text-align: left;
+  }
+
+  #join {
+    width: 221px;
+  }
+
+  #join p {
+    font-size: 28px;
+  }
+}
+/* END of INTRO */
+
+
+/* START of OUR MUSIC */
+#music-content {
   background: var(--background-color-gray);
   border-radius: 10px;
 }
@@ -167,21 +243,106 @@
 }
 
 #discover {
-  margin: 30px 108px;
+  margin: 25px 108px;
   width: 176px;
   height: 44px;
   font-size: 18px;
 }
 
+@media screen and (min-width: 769px) {
+  .our-music {
+    height: 512px;
+  }
+
+  #music-heading {
+    font-size: 40px;
+  }
+
+  .album-grid {
+    height: 337px;
+  }
+
+  .album-card {
+    height: 295px;
+    width: 200px;
+  }
+
+  .album-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  .album-title {
+    font-size: 24px;
+  }
+
+  .album-year {
+    font-size: 24px;
+  }
+
+  #discover {
+    width: 255px;
+    height: 69px;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .our-music {
+    height: 552px;
+  }
+
+  #music-content {
+    max-width: 1145px;
+    margin: 0 auto;
+  }
+
+  #music-heading {
+    font-size: 40px;
+  }
+
+  .album-grid {
+    height: 337px;
+  }
+
+  .album-card {
+    height: 295px;
+    width: 200px;
+  }
+
+  .album-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  .album-title {
+    font-size: 24px;
+  }
+
+  .album-year {
+    font-size: 24px;
+  }
+
+  #discover {
+    width: 255px;
+    height: 69px;
+    font-size: 24px;
+  }
+}
+/* END of OUR MUSIC */
+
+
+/* START of TRANSITION */
 .transition {
   display: flex;
   flex-direction: column;
   padding-bottom: 34px;
 }
 
-#transition-image {
-  background: linear-gradient(to top, rgba(22,22,27 , 1), transparent, rgba(22,22,27, 1)), url("../../assets/images/home-page/transition.png");
-  background-size: cover;
+@media screen and (max-width: 768px) {
+  #transition-image {
+    background: linear-gradient(to top, rgba(22, 22, 27, 1), transparent, rgba(22, 22, 27, 1)), url("../../assets/images/home-page/transition.png");
+    background-size: cover;
+  }
 }
 
 #transition-flex {
@@ -203,6 +364,55 @@
   height: 44px;
 }
 
+@media screen and (min-width: 769px) {
+  .transition {
+    height: 446px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 63px;
+    padding-right: 35px;
+  }
+
+  #transition-image {
+    background: url("../../assets/images/home-page/transition.png");
+    background-size: cover;
+    max-width: 543px;
+  }
+
+  #transition-row {
+    flex-direction: row-reverse;
+    gap: 26px;
+  }
+
+  #transition-flex {
+    align-items: start;
+  }
+
+  #perform {
+    text-align: left;
+    font-size: 35px;
+  }
+
+  #transition-flex p {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  #book {
+    align-self: center;
+    padding: 24px 61px;
+    width: 261px;
+    height: 86px;
+  }
+
+  #book p {
+    font-size: 32px;
+  }
+}
+/* END of Transition */
+
+
+/* START of END */
 .end {
   background: var(--background-color-navy);
   padding: 50px 20px;
@@ -220,10 +430,42 @@
 }
 
 #btn-end {
-  display: block;
+  /* display: block; */
   margin: 0 auto;
   padding: 24px 61px;
   font-size: 18px;
   border-radius: 20px;
 }
 
+@media screen and (min-width: 769px) {
+  .end {
+    height: 586px;
+    padding: 100px 0;
+  }
+
+  #end-flex {
+    gap: 43px;
+  }
+
+  #recruit-heading {
+    font-size: 40px;
+    /* font-weight: 600; */
+  }
+
+  #recruit-heading + p {
+    width: 622px;
+    align-self: center;
+  }
+
+  #btn-end {
+    width: 376px;
+    height: 86px;
+    border-radius: 20px;
+    padding: 24px 61px;
+  }
+
+  #btn-end p {
+    font-size: 30px;
+  }
+}
+/* END of END */
