@@ -25,6 +25,10 @@ export class AppComponent implements OnInit {
     });
   }
 
+  closeMobileNav(): void {
+    this.isMobileNavOpen = false;
+  }
+
   toggleMobileNav() {
     this.isMobileNavOpen = !this.isMobileNavOpen;
   }

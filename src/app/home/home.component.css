@@ -33,6 +33,65 @@
   font-size: 32px;
 }
 
+  @media (max-width: 480px) {
+  
+    .transition-image {
+      width: 394px;
+      height: 295px;
+    }
+  
+    .transition h1 {
+      font-size: 22px;
+    }
+  
+    .transition .body-text {
+      font-size: 18px;
+    }
+  
+    .transition-button {
+      width: 141px;
+      height: 44px;
+    }
+  }
+  
+  
+  .transition {
+    display: flex;
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust as necessary to create reasonable space between elements */
+    max-width: 600px; /* Adjust as necessary to create reasonable space beside the image */
+  }
+  
+  .transition-image {
+    margin-left: auto;
+    margin-right: 10%;
+    width: 596px;
+    height: 446px;
+    border-radius: 10px; /* Optional: to add rounded corners to the image */
+  }
+  
+  .transition-button {
+    width: 261px;
+    height: 86px;
+    padding: 24px 61px;
+    border-radius: 20px;
+    background-color: #40667D;
+    color: var(--text-color-dark);
+    border: none;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    font-size: 24px; /* Set the font size to match the body text size */
+  }
+  
+  .transition-button:active {
+    transform: scale(0.95);
+  }
+  
+@media (max-width: 768px) {}
 #diverse {
   text-align: left;
   align-self: left;

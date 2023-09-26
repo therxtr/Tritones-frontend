@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
-import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { FaqComponent } from './faq/faq.component';
     BookingsComponent,
     ThemeToggleComponent,
     ContactUsComponent,
-    FaqComponent,
   ],
   imports: [
     BrowserModule,
