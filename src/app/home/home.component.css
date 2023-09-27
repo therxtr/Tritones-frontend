@@ -34,38 +34,38 @@
 }
 
   @media (max-width: 480px) {
-  
+
     .transition-image {
       width: 394px;
       height: 295px;
     }
-  
+
     .transition h1 {
       font-size: 22px;
     }
-  
+
     .transition .body-text {
       font-size: 18px;
     }
-  
+
     .transition-button {
       width: 141px;
       height: 44px;
     }
   }
-  
-  
+
+
   .transition {
     display: flex;
   }
-  
+
   .text-content {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Adjust as necessary to create reasonable space between elements */
     max-width: 600px; /* Adjust as necessary to create reasonable space beside the image */
   }
-  
+
   .transition-image {
     margin-left: auto;
     margin-right: 10%;
@@ -73,7 +73,7 @@
     height: 446px;
     border-radius: 10px; /* Optional: to add rounded corners to the image */
   }
-  
+
   .transition-button {
     width: 261px;
     height: 86px;
@@ -86,11 +86,11 @@
     transition: transform 0.3s;
     font-size: 24px; /* Set the font size to match the body text size */
   }
-  
+
   .transition-button:active {
     transform: scale(0.95);
   }
-  
+
 @media (max-width: 768px) {}
 #diverse {
   text-align: left;
@@ -347,6 +347,8 @@
 
 #transition-flex {
   gap: 20px;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 #perform {
@@ -364,13 +366,32 @@
   height: 44px;
 }
 
+@media screen and (min-width: 481px) {
+  .transition {
+    height: 873px;
+  }
+
+  #transition-image {
+    height: 50%;
+  }
+
+  #transition-flex {
+    height: 50%;
+  }
+
+  #transition-flex h1 {
+    font-size: 36px;
+  }
+  #transition-flex p {
+    font-size: 25px;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .transition {
     height: 446px;
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 63px;
-    padding-right: 35px;
   }
 
   #transition-image {
@@ -382,6 +403,9 @@
   #transition-row {
     flex-direction: row-reverse;
     gap: 26px;
+    justify-content: center;
+    /* min-width: 1145px; */
+    margin: 0 auto;
   }
 
   #transition-flex {
@@ -407,6 +431,12 @@
 
   #book p {
     font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #transition-row {
+    min-width: 1145px;
   }
 }
 /* END of Transition */
