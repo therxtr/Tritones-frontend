@@ -4,6 +4,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--background-color);
+  position: relative;
 }
 
 .logo {
@@ -21,13 +22,17 @@ header {
   display: none; /* Hide by default */
   cursor: pointer;
   text-align: right;
-  font-size: 60px;
   width: 100%;
   height: 100%;
   margin-left: auto; /* Push the icon to the right */
   /* margin-right: 10px; */
 }
 
+.burger-menu svg {
+  height: 100%;
+  width: 40px;
+  vertical-align: middle;
+}
 
 .nav-mobile {
   display: none; /* Hide by default */
