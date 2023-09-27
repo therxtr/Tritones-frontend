@@ -7,7 +7,7 @@
     <div class="nav-container">
       <nav class="nav-desktop">
         <!-- <a routerLink="/" class="body-text">Home</a> -->
-        <a routerLink="/about-us" class="body-text">Members</a>
+        <a routerLink="/members" class="body-text">Members</a>
         <a routerLink="/auditions" class="body-text">Auditions</a>
         <a routerLink="/photos" class="body-text">Photos</a>
         <a routerLink="/bookings" class="body-text">Bookings</a>
@@ -16,17 +16,17 @@
 
       <nav class="nav-mobile" [class.open]="isMobileNavOpen">
 
-        <a routerLink="/" class="body-text" (click)="closeMobileNav()">Home</a>
-        <a routerLink="/about-us" class="body-text" (click)="closeMobileNav()">About Us</a>
+        <!-- <a routerLink="/" class="body-text" (click)="closeMobileNav()">Home</a> -->
+        <a routerLink="/members" class="body-text" (click)="closeMobileNav()">Members</a>
         <a routerLink="/auditions" class="body-text" (click)="closeMobileNav()">Auditions</a>
         <a routerLink="/photos" class="body-text" (click)="closeMobileNav()">Photos</a>
         <a routerLink="/bookings" class="body-text" (click)="closeMobileNav()">Bookings</a>
-        <a routerLink="/contact-us" class="body-text" (click)="closeMobileNav()">Contact Us</a>
+        <!-- <a routerLink="/contact-us" class="body-text" (click)="closeMobileNav()">Contact Us</a> -->
 
       </nav>
-      
 
-      <app-theme-toggle></app-theme-toggle>
+
+      <!-- <app-theme-toggle></app-theme-toggle> -->
     </div>
   </header>
   <router-outlet></router-outlet>
