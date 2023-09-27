@@ -1,9 +1,13 @@
 header {
+  height: 80px;
+  width: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between; 
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--background-color);
+  position: sticky;
+  top: 0;
+  /* width: 100vw; */
+  z-index: 2000; /* This ensures the header stays above other content */
 }
 
 .logo {
@@ -13,6 +17,7 @@ header {
 
 .nav-container {
   display: flex;
+  /* justify-content:space-between; */
   align-items: center;
   gap: 20px; /* Adjust as necessary to create space between nav and toggle button */
 }
@@ -29,13 +34,13 @@ header {
 
 
 .nav-mobile {
+  /* color: var(--text-color-dark); */
   display: none; /* Hide by default */
   flex-direction: column;
   position: fixed; /* Use fixed to position it relative to the viewport */
-  top: 60px; /* Adjust based on the height of your header */
+  top: 80px; /* Adjust based on the height of your header */
   left: 0; /* Start from the left edge of the viewport */
   width: 100%; /* Make it span the entire width */
-  background-color: #fff; /* Adjust as necessary */
   padding: 1rem;
   border-radius: 0; /* Adjust as necessary */
   z-index: 1000; /* Use a high z-index to ensure it appears above other elements */
@@ -71,10 +76,11 @@ nav {
 nav a {
   margin: 0 1rem;
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color-dark);
 }
 
-nav a:hover {
+nav a:hover,.footer-nav:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -149,3 +155,15 @@ app-theme-toggle {
   }
 }
 
+
+/* .nav-desktop{
+  color: var(--text-color-dark);
+} */
+
+.nav-mobile{
+  align-items: center;
+}
+
+.nav-mobile .body-text{
+  color: var(--text-color-dark);
+}

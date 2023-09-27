@@ -33,7 +33,7 @@
     </div>
 </div>
 
-<div *ngFor="let voicePartKey of voicePartKeys">
+<div class="display-member" *ngFor="let voicePartKey of voicePartKeys">
   <div [id]="voicePartKey" class="voice-part">
     <div class="voice-part-title">{{ getDisplayName(voicePartKey) | titlecase }}</div>
     <div class="member-list">
