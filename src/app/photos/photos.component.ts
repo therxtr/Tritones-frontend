@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PhotoService } from '../photos.service';
+import { Photo } from '../photos';
 
 @Component({
   selector: 'app-photos',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent {
+  photos: Photo[] = []; // Assuming you have an array of photos
 
+  sortedPhotos: Photo[] = [];
+  
+  constructor(private photoService: PhotoService) {}
+
+  ngOnInit() {
+    this.photoService.getPhotos().subscribe((data: Photo[]) => {
+      console.log(data);  // Log the data here
+      this.photos = data;
+      this.sortedPhotos = this.photos.sort((a, b) => b.year - a.year);
+    });
+  }
+  
+  
 }

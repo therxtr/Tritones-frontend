@@ -3,20 +3,15 @@
 }
 
 .container {
-
+  display: flex;
+  flex-direction: row; /* Set to row so sidebar and main content are side by side */
 }
 
 .sidebar {
-  width: 25%; /* Set the width of the sidebar to 25% of the container */
-  height: 100vh; /* Takes up the full viewport height */
-  position: fixed; /* Makes the sidebar fixed */
-  top: 12%; /* Positions the sidebar at the top of the viewport */
-  left: 2%; /* Positions the sidebar at the left of the viewport */
-  display: flex;
-  flex-direction: column;
-  align-items: start; /* Aligns items to the start (left) */
-  padding: 20px; /* Adds some padding inside the sidebar */
-  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  position: sticky;
+  top: 12%;
+  width: 24%;
+  align-self: flex-start; /* Aligns the sidebar to the top of the container */
 }
 
 .tabs{
@@ -41,6 +36,8 @@
 .apply-now-button:hover {
   background-color: #305060; /* Changes the background color when hovering over the button */
 }
+
+
 @media (max-width: 768px) {
   .container {
 
@@ -50,10 +47,10 @@
   }
 
   .content-block {
-    position: fixed;
-    top: 10%;
+    position: sticky;
+    top: 80px;
     width: 100%;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     z-index: 1; /* to keep it above other elements */
   }
   
@@ -82,22 +79,15 @@
 }
 
 .main-section {
-  margin-left: 25%; /* Adjusts the main section to not get overlapped by the sidebar */
-  width: 74%; /* Set the width of the main section to 75% of the container */
+  flex: 1; /* Allows the main section to take up the remaining space */
+  margin-left: 2%; /* Provides a gap between the sidebar and the main content */
+  width: 74%;
   padding: 20px;
   box-sizing: border-box;
 }
 
-@media(max-width:768px) {
-  .main-section {
-    margin-left: 0; /* Reset the margin */
-    width: 100%; /* Set width to 100% for smaller screens */
-  }
-}
-
-
 .main-section .headline-1 {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .main-section .subheadline-1 {
@@ -146,11 +136,89 @@
 }
 
 
+@media(max-width:768px) {
+  .main-section {
+    margin-left: 0; /* Reset the margin */
+    width: 100%; /* Set width to 100% for smaller screens */
+  }
+}
+
+
+
+
+
+.faq-container {
+  display: flex;
+  padding: 0px 50px;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 20px;
+  align-self: stretch;
+}
+
+.faq-item {
+  border-radius: 10px;
+  border: 2px solid #E1D8B0;
+  padding: 20px 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  margin-right: 10px;
+}
+
+.faq-answer {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.faq-answer.hidden {
+  display: none;
+}
+
+.faq-answer.visible {
+  max-height: 1000px;
+}
+
 
 
 @media (max-width: 768px) {
+  .container {
+    display: flex;
+
+    flex-direction: column;
+    padding: 0px 20px;
+    /* align-items: center; */
+    gap: 0px;
+    align-self: stretch;
+  }
+  
+  .faq-item {
+    border-radius: 10px;
+    border: 2px solid #E1D8B0;
+    padding: 20px 50px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
   .headline-1{
     font-size: 40px;
+  }
+  .headline-2{
+    font-size: 24px;
   }
   .subheadline-1{
     font-size: 32px;
@@ -165,6 +233,11 @@
   .headline-1{
     font-size: 30px;
   }
+  
+  .headline-2{
+    font-size: 18px;
+  }
+
   .subheadline-1{
     font-size: 22px;
   }

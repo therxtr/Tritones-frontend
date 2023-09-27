@@ -1,11 +1,12 @@
 <div class="container">
-  <header>
+  <header class="themetoggle-block">
     <a routerLink="/">
       <img [src]="logoSrc" alt="Tritone Logo" class="logo">
     </a>
     <div class="burger-menu material-symbols-outlined" (click)="toggleMobileNav()">☰</div>
     <div class="nav-container">
       <nav class="nav-desktop">
+
         <!-- <a routerLink="/" class="body-text">Home</a> -->
         <a routerLink="/members" class="body-text">Members</a>
         <a routerLink="/auditions" class="body-text">Auditions</a>
@@ -13,6 +14,7 @@
         <a routerLink="/bookings" class="body-text">Bookings</a>
         <!-- <a routerLink="/contact-us" class="body-text">Contact Us</a> -->
       </nav>
+
 
       <nav class="nav-mobile" [class.open]="isMobileNavOpen">
 
@@ -24,8 +26,6 @@
         <!-- <a routerLink="/contact-us" class="body-text" (click)="closeMobileNav()">Contact Us</a> -->
 
       </nav>
-
-
       <!-- <app-theme-toggle></app-theme-toggle> -->
     </div>
   </header>
@@ -36,9 +36,10 @@
 
 <footer class="footer">
 
-    <div class="footer-column flex-column">
+    <div class="footer-column">
       <h1 class="headline-1">The Tritones</h1>
       <p class="subheadline-1">UC San Diego's premier co-ed<br>a capella group - est.1996.</p>
+
       <div class="footer-column flex-column tablet">
         <p class="body-text">tritones@ucsd.edu↗</p>
         <div class="social-icons">
@@ -61,18 +62,18 @@
       </div>
     </div>
 
-    <div class="footer-column flex-column">
+    <div class="footer-column">
       <p class="subheadline-1">Our Events</p>
-      <p class="body-text">Bookings</p>
-      <p class="body-text">Photos</p>
+      <p routerLink="/bookings" class="footer-nav body-text">Bookings</p>
+      <p routerLink="/photos" class="footer-nav body-text">Photos</p>
     </div>
-    <div class="footer-column flex-column">
+    <div class=" footer-column">
       <p class="subheadline-1">Get Involved</p>
-      <p class="body-text">About Us</p>
-      <p class="body-text">Auditions</p>
+      <p routerLink="/about-us" class="footer-nav body-text">About Us</p>
+      <p routerLink="/auditions" class="footer-nav body-text">Auditions</p>
     </div>
 
 
-
-
+  
+  
 </footer>

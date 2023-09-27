@@ -33,25 +33,215 @@
   font-size: 32px;
 }
 
+
+  .photo-container {
+    position: relative;
+    width: 960px; /* 960 / 1440 */
+    height: 721px;
+  }
+  
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-content {
+    display: flex;
+    /* background: linear-gradient(to right, var(--background-color-dark), transparent 75%); */
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%; /* Adjust as necessary */
+  }
+  
+  .join-button {
+    width: 221px; /* Adjust as necessary */
+    height: 86px; /* Adjust as necessary */
+    padding: 24px 61px; /* Adjust as necessary */
+    border-radius: 20px; /* Adjust as necessary */
+    background-color: #40667D; /* Adjust as necessary */
+    color: var(--text-color-dark); /* Adjust as necessary */
+    border: none; /* Remove default button border */
+    font-size: 24px; /* Adjust as necessary to match your typography settings */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    top: 526px; /* Adjust as necessary */
+    left: 1054px; /* Adjust as necessary */
+    transition: transform 0.3s; /* Add transition for click animation */
+    align-self: center; /* Align the button in the center */
+  }
+  
+  .join-button:active {
+    transform: scale(0.95); /* Add scale transformation for click animation */
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .photo-container {
+      
+      width: 768px; /* Set the width for the tablet view */
+      height: 473px;
+    }
+  
+    .photo-container .photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Changed to cover to crop the image */
+    }
+  
+    .text-content {
+      padding-left: 0;
+      background: none;
+    }
+  
+    .headline-1 {
+      font-size: 40px; /* Adjust the font size for h1 in tablet view */
+    }
+  
+    .body-text {
+      font-size: 25px; /* Adjust the font size for body text in tablet view */
+    }
+  
+
+  }
+
   @media (max-width: 480px) {
-  
-    .transition-image {
-      width: 394px;
-      height: 295px;
+    .intro {
+      flex-direction: column;
+      align-items: left;
+      text-align: left;
+    }
+    .photo-container {
+
+      width: 480px; /* Set the width for the mobile view */
+      height: 260px; /* Set the height for the mobile view */
+
+    }
+
+    .photo-container .photo img{
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
     }
   
-    .transition h1 {
-      font-size: 22px;
+    .headline-1 {
+      font-size: 32px; /* Set the h1 font size for the mobile view */
+    }
+    
+    .subheadline-1{
+      font-size: 20px;
+    }
+    .intro .body-text {
+      font-size: 20px; /* Set the body text size for the mobile view */
     }
   
-    .transition .body-text {
-      font-size: 18px;
-    }
-  
-    .transition-button {
-      width: 141px;
+    .join-button {
+      display: flex;
+      width: 180px;
       height: 44px;
+      padding: 10px 10px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
     }
+  
+    .our-music h2 {
+      font-size: 22px; /* Set the h2 font size in the "Our Music" section for the mobile view */
+    }
+  
+    .our-music .body-text {
+      font-size: 18px; /* Set the body text size in the "Our Music" section for the mobile view */
+    }
+  
+    .discover-button {
+      width: 176px; /* Set the button width in the "Our Music" section for the mobile view */
+      height: 44px; /* Set the button height in the "Our Music" section for the mobile view */
+    }
+    
+    .our-music h2{
+      font-size: 22px;
+      }
+      .discover-button{
+        font-size: 18px;
+      }
+  }
+  .our-music {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+  
+  .content-block {
+    width: 1000px; /* Adjust as necessary */
+    height: 600px; /* Adjust as necessary */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 20px;
+    background-color: #343437; /* Set the background color to match the dark theme */
+    border-radius: 10px; /* Maintain the border-radius */
+    margin-top: 30px;
+  }
+  
+  .album-grid {
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 16px;
+    white-space: nowrap;
+  }
+  
+  .album-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 70%;
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .album-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .album-details {
+    text-align: center;
+  }
+  
+  .album-title {
+    font-weight: bold;
+  }
+  
+  .album-year {
+    color: #666;
+  }
+  
+  
+  
+  .discover-button {
+    width: 325px;
+    height: 86px;
+    padding: 24px 61px;
+    border-radius: 20px;
+    border: 1px solid var(--background-color-light); /* Adjust as necessary */
+    color: var(--text-color-dark); /* Adjust as necessary */
+    background-color: transparent; /* Set background color to transparent */
+    margin-top: 30px;
+    font-size: 24px; /* Set the font size to match the body text size */
+    transition: transform 0.3s; /* Add transition for click animation */
+  }
+  
+  .discover-button:active {
+    transform: scale(0.95); /* Add scale transformation for click animation */
   }
   
   
@@ -90,7 +280,8 @@
   .transition-button:active {
     transform: scale(0.95);
   }
-  
+
+
 @media (max-width: 768px) {}
 #diverse {
   text-align: left;
@@ -468,4 +659,3 @@
     font-size: 30px;
   }
 }
-/* END of END */

@@ -29,6 +29,7 @@ export class BookingsComponent implements OnInit{
   showScrollButton = false
   showBookNow = true;
 
+
   constructor(private http: HttpClient) {}
 
   private updatePhotoSrc(): void {
@@ -56,16 +57,17 @@ export class BookingsComponent implements OnInit{
     console.log('onSubmit function called');
     console.log(this.formData)
     this.http.post('http://127.0.0.1:8000/contactData/', this.formData).subscribe(
-      (response) => {
-        console.log('Form submitted successfully', response);
-        // Handle success (e.g., show a success message)
-      },
-      (error) => {
-        console.error('Form submission error', error);
-        // Handle error (e.g., display an error message)
-      }
-    );
+        (response) => {
+          console.log('Form submitted successfully', response);
+          // Handle success (e.g., show a success message)
+        },
+        (error) => {
+          console.error('Form submission error', error);
+          // Handle error (e.g., display an error message)
+        }
+      );
   }
+
 
   toggleForm() {
     this.showFormFlag = !this.showFormFlag;
