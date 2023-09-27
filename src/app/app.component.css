@@ -25,11 +25,12 @@ header {
 .burger-menu {
   display: none; /* Hide by default */
   cursor: pointer;
-  width: 17.91px;
-  height: 12.21px;
+  text-align: right;
+  font-size: 60px;
+  width: 100%;
+  height: 100%;
   margin-left: auto; /* Push the icon to the right */
-  margin-right: 10px;
-
+  /* margin-right: 10px; */
 }
 
 
@@ -57,6 +58,7 @@ header {
   color: #000; /* Adjust as necessary */
 }
 
+/* Tablet Stylings */
 @media (max-width: 768px) {
   .nav-desktop {
     display: none; /* Hide desktop nav in tablet view */
@@ -114,7 +116,7 @@ app-theme-toggle {
 
 @media (max-width: 768px) {
   .footer-column{
-    
+
   }
   .tablet{
     display:block;
@@ -125,8 +127,8 @@ app-theme-toggle {
   .footer-column h1 {
     font-size: 32px;
   }
-  
-  .footer-column .subheadline-1, 
+
+  .footer-column .subheadline-1,
   .footer-column .body-text {
     margin-left: auto;
     margin-top: 20px;
@@ -135,6 +137,7 @@ app-theme-toggle {
 }
 
 
+/* Mobile Stylings */
 @media (max-width: 480px) {
 
   .footer {
@@ -149,7 +152,7 @@ app-theme-toggle {
     display: block; /* Only display the first footer column */
   }
 
-  .footer-column .subheadline-1, 
+  .footer-column .subheadline-1,
   .footer-column .body-text {
     font-size: 14px; /* Adjust the font size for mobile view */
   }

@@ -13,6 +13,7 @@ body {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
   transition: background-color 0.3s, color 0.3s;
+  width: 100vw;
 }
 
 body.dark {
@@ -79,4 +80,45 @@ body.dark .nav-desktop a.body-text, body.dark .nav-mobile a.body-text {
   font-family: 'Syne', sans-serif;
   font-weight: 400; /* Regular */
   font-size: 16px;
+
+.btn {
+  display: inline-flex;
+  /* padding: 24px 61px; */
+  font-family: 'Syne', sans-serif;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+
+  /* style */
+  border-radius: 20px;
+  background: #40667D;
+  color: var(--text-color-dark);
+  text-align: center;
+  line-height: normal;
+  font-style: normal;
+  border: none;
+  font-size: 18px;
+}
+
+.btn-transparent {
+  /* layout */
+  display: inline-flex;
+  /* padding: 24px 61px; */
+  justify-content: center;
+  align-items: center;
+
+  /* style */
+  border-radius: 15px;
+  border: 1px solid var(--text-color-dark);
+  background: rgba(0, 0, 0, 0);
+  color: var(--text-color-dark);
+  text-align: center;
+  font-family: Syne;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
