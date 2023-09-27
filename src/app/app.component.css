@@ -20,11 +20,12 @@ header {
 .burger-menu {
   display: none; /* Hide by default */
   cursor: pointer;
-  width: 17.91px;
-  height: 12.21px;
+  text-align: right;
+  font-size: 60px;
+  width: 100%;
+  height: 100%;
   margin-left: auto; /* Push the icon to the right */
-  margin-right: 10px;
-
+  /* margin-right: 10px; */
 }
 
 
