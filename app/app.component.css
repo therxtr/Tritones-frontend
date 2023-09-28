@@ -1,0 +1,169 @@
+header {
+  height: 80px;
+  width: auto;
+  display: flex;
+  justify-content:space-between; 
+  align-items: center;
+  position: sticky;
+  top: 0;
+  /* width: 100vw; */
+  z-index: 2000; /* This ensures the header stays above other content */
+}
+
+.logo {
+  width: 145px;
+  height: 45px;
+}
+
+.nav-container {
+  display: flex;
+  /* justify-content:space-between; */
+  align-items: center;
+  gap: 20px; /* Adjust as necessary to create space between nav and toggle button */
+}
+
+.burger-menu {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  width: 17.91px;
+  height: 12.21px;
+  margin-left: auto; /* Push the icon to the right */
+  margin-right: 10px;
+
+}
+
+
+.nav-mobile {
+  /* color: var(--text-color-dark); */
+  display: none; /* Hide by default */
+  flex-direction: column;
+  position: fixed; /* Use fixed to position it relative to the viewport */
+  top: 80px; /* Adjust based on the height of your header */
+  left: 0; /* Start from the left edge of the viewport */
+  width: 100%; /* Make it span the entire width */
+  padding: 1rem;
+  border-radius: 0; /* Adjust as necessary */
+  z-index: 1000; /* Use a high z-index to ensure it appears above other elements */
+}
+
+.nav-mobile.open {
+  display: flex; /* Show when the open class is applied */
+}
+
+
+.nav-mobile a {
+  padding: 0.5rem 0; /* Adjust as necessary */
+  text-decoration: none;
+  color: #000; /* Adjust as necessary */
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none; /* Hide desktop nav in tablet view */
+  }
+
+  .burger-menu {
+    display: block; /* Show burger menu icon in tablet view */
+  }
+}
+
+
+nav {
+  display: flex;
+  gap: 20px; /* Adjust as necessary to create space between links */
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+nav a:hover,.footer-nav:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+app-theme-toggle {
+  font-size: 24px; /* Set to your body text size */
+}
+
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+.footer-column{
+  flex: 1;
+  margin-right: 50px;
+}
+
+.tablet{
+  display: none; /* Hide it in desktop view */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Adjust the gap between the icons */
+}
+
+
+@media (max-width: 768px) {
+  .footer-column{
+    
+  }
+  .tablet{
+    display:block;
+  }
+  .desktop{
+    display: none;
+  }
+  .footer-column h1 {
+    font-size: 32px;
+  }
+  
+  .footer-column .subheadline-1, 
+  .footer-column .body-text {
+    margin-left: auto;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .footer {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .footer-column {
+    display: none; /* Hide all footer columns by default */
+  }
+
+  .footer-column:first-of-type {
+    display: block; /* Only display the first footer column */
+  }
+
+  .footer-column .subheadline-1, 
+  .footer-column .body-text {
+    font-size: 14px; /* Adjust the font size for mobile view */
+  }
+}
+
+
+/* .nav-desktop{
+  color: var(--text-color-dark);
+} */
+
+.nav-mobile{
+  align-items: center;
+}
+
+.nav-mobile .body-text{
+  color: var(--text-color-dark);
+}

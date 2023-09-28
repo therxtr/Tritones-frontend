@@ -1,0 +1,54 @@
+<section class="intro">
+  <div class="photo-container">
+    <img src="assets/images/home-page/home-Intro.png" alt="Tritone Photo" class="photo">
+  </div>
+  <div class="background-img" id="intro-image">
+    <div class="text-content">
+      <h1 class="headline-1">UCSD's premiere vocal<br>ensemble</h1>
+      <h3 class="subheadline-1">Diverse people, majors, &<br>interests-united by a<br>common passion for music.</h3>
+      <button pButton type="button" class="subheadline-1 join-button" routerLink="/auditions">
+      Join us
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="our-music">
+  <div class="content-block">
+    <h2 class="subheadline-1">Our music</h2>
+      <div class="album-grid">
+        <div *ngFor="let track of tracks" class="album-card">
+          <img [src]="track.image_url" alt="{{ track.name }} album cover" class="album-cover">
+          <div class="album-details">
+            <p class="album-title">{{ track.name }}</p>
+            <p class="album-year">{{ track.release_year }}</p>
+          </div>
+        </div>
+    </div>
+
+    <button pButton type="button" class="discover-button body-text">
+      Discover more
+    </button>
+  </div>
+</section>
+
+
+<section class="transition">
+  <div class="text-content">
+    <h1 class="headline-1">We love to perform- <br> no matter the occasion</h1>
+    <p class="body-text">Whether it’s performing on TV, entertaining for community events, or getting dressed up for your formal occasion, we bring award-winning performances wherever we go.</p>
+    <button pButton type="button" class="transition-button body-text" routerLink="/bookings" >Book now</button>
+  </div>
+  <img src="assets/images/home-page/transition.png" alt="Image description" class="transition-image">
+</section>
+
+
+<section class="end">
+  <div class="end-content">
+    <h1 class="headline-1">We’re always on the lookout for talented,<br> fun-loving voices and personalities!</h1>
+    <p class="body-text">Our members come from all walks of campus life and<br> represent a diverse community of UC San Diego.<br> We encourage everyone with a passion for singing to<br> audition— regardless of your formal vocal background.</p>
+    <button pButton type="button" class="end-button body"routerLink="/auditions">Become a Tritone!</button>
+  </div>
+</section>
