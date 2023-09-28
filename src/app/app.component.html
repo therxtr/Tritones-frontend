@@ -8,29 +8,19 @@
         <path d="M0.0934448 12.6054V10.4554H18V12.6054H0.0934448ZM0.0934448 7.57498V5.42498H18V7.57498H0.0934448ZM0.0934448 2.54456V0.394531H18V2.54456H0.0934448Z" fill="#F9F6EF"/>
       </svg>
     </div>
-    <div class="nav-container">
+    <div class="nav-container" *ngIf="displayPaths">
       <nav class="nav-desktop">
-        <!-- <a routerLink="/" class="body-text">Home</a> -->
         <a routerLink="/members" class="body-text">Members</a>
         <a routerLink="/auditions" class="body-text">Auditions</a>
         <a routerLink="/photos" class="body-text">Photos</a>
         <a routerLink="/bookings" class="body-text">Bookings</a>
-        <!-- <a routerLink="/contact-us" class="body-text">Contact Us</a> -->
       </nav>
-
       <nav class="nav-mobile" [class.open]="isMobileNavOpen">
-
-        <!-- <a routerLink="/" class="body-text" (click)="closeMobileNav()">Home</a> -->
         <a routerLink="/members" class="body-text" (click)="closeMobileNav()">Members</a>
         <a routerLink="/auditions" class="body-text" (click)="closeMobileNav()">Auditions</a>
         <a routerLink="/photos" class="body-text" (click)="closeMobileNav()">Photos</a>
         <a routerLink="/bookings" class="body-text" (click)="closeMobileNav()">Bookings</a>
-        <!-- <a routerLink="/contact-us" class="body-text" (click)="closeMobileNav()">Contact Us</a> -->
-
       </nav>
-
-
-      <!-- <app-theme-toggle></app-theme-toggle> -->
     </div>
   </header>
   <router-outlet></router-outlet>

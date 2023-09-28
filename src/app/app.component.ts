@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ThemeService } from './theme.service';
 import { Observable } from 'rxjs';
 import { ContactService } from './contact.service';
@@ -12,9 +12,15 @@ export class AppComponent implements OnInit {
   isDarkTheme!: Observable<boolean>;
   isMobileNavOpen = false;
   logoSrc!: string;
-  
+  displayPaths = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.checkScreenWidth();
+  }
+
   constructor(private themeService: ThemeService) {}
-  
+
   ngOnInit() {
     this.isDarkTheme = this.themeService.isDarkTheme;
 
@@ -23,6 +29,13 @@ export class AppComponent implements OnInit {
       theme ? body.classList.add('dark') : body.classList.remove('dark');
       this.logoSrc = theme ? 'assets/images/logo/logolight.png' : 'assets/images/logo/logodark.png';
     });
+
+    this.checkScreenWidth();
+  }
+
+  private checkScreenWidth(): void {
+    const screenWidth = window.innerWidth;
+    this.displayPaths = screenWidth >= 769;
   }
 
   closeMobileNav(): void {
@@ -32,6 +45,6 @@ export class AppComponent implements OnInit {
   toggleMobileNav() {
     this.isMobileNavOpen = !this.isMobileNavOpen;
   }
-  
-  
+
+
 }
