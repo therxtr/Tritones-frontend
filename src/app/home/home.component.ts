@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { SpotifytracksService } from '../spotifytracks.service';
 import { Track } from '../spotify-tracks';
 
@@ -9,11 +9,18 @@ import { Track } from '../spotify-tracks';
 })
 export class HomeComponent {
   tracks: Track[] = [];
+  introFlex = false
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.checkScreenWidth();
+  }
 
   constructor(private spotifyService: SpotifytracksService) {}
 
   ngOnInit(): void {
     this.getTracks();
+    this.checkScreenWidth();
   }
 
   getTracks(): void {
@@ -25,5 +32,10 @@ export class HomeComponent {
         console.error('Error fetching tracks', error);
       }
     );
+  }
+
+  private checkScreenWidth(): void {
+    const screenWidth = window.innerWidth;
+    this.introFlex = screenWidth >= 769; // change this
   }
 }

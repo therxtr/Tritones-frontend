@@ -122,7 +122,7 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
   .intro {
     position: relative;
     height: 721px;
@@ -141,7 +141,10 @@
   #premier-container {
     position: absolute;
     padding: 0 0;
-    width: 100%;
+    width: 32%;
+    bottom: 120px;
+    right: 0;
+    margin-right: 30px;
     align-items: flex-start;
     gap: 30px;
   }
@@ -221,11 +224,8 @@
   gap: 23px;
   align-content: space-between;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 21px 26px;
-}
-
-.album-grid::-webkit-scrollbar {
-  display: none;
 }
 
 .album-card {
@@ -327,6 +327,7 @@
 
   .album-grid {
     height: 337px;
+    overflow-x: auto;
   }
 
   .album-card {
@@ -391,6 +392,7 @@
   }
 
   #discover {
+    margin-top: 20px;
     width: 255px;
     height: 69px;
     font-size: 24px;
@@ -497,7 +499,8 @@
   #transition-image {
     background-size: cover;
     max-width: 45%;
-    height: 406px;
+    align-self: center;
+    height: 65%;
     opacity: 1;
   }
 
@@ -547,6 +550,10 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  #transition-image {
+    height: 406px;
   }
 
   #transition-flex {
