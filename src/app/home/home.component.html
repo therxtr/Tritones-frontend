@@ -1,9 +1,18 @@
 <div class="main-content flex-column">
   <section class="intro flex-column no-flex">
     <div class="background-img box-shadow no-shadow" id="intro-image">
-      <img src="../../assets/images/home-page/home-Intro.png" alt="">
+      <img src="../../assets/images/home-page/home-Intro.png" alt="" id="intro-img-desktop">
+      <div *ngIf="isDesktopWidthValid()" class="desktop-width" id="intro-desktop">
+        <div class="text-content flex-column" id="premier-container">
+          <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1>
+          <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
+          <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">
+            <p>Join us</p>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="text-content flex-column" id="premier-container">
+    <div class="text-content flex-column" id="premier-container" *ngIf="!isDesktopWidthValid()">
       <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1>
       <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
       <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">

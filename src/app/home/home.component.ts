@@ -9,14 +9,16 @@ import { Track } from '../spotify-tracks';
 })
 export class HomeComponent {
   tracks: Track[] = [];
-  introFlex = false
+  isDesktopWidth = window.innerWidth >= 1280;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.checkScreenWidth();
   }
 
-  constructor(private spotifyService: SpotifytracksService) {}
+  constructor(private spotifyService: SpotifytracksService) {
+    this.checkScreenWidth();
+  }
 
   ngOnInit(): void {
     this.getTracks();
@@ -35,7 +37,10 @@ export class HomeComponent {
   }
 
   private checkScreenWidth(): void {
-    const screenWidth = window.innerWidth;
-    this.introFlex = screenWidth >= 769; // change this
+    this.isDesktopWidth = window.innerWidth >= 1280;
+  }
+
+  isDesktopWidthValid(): boolean {
+    return this.isDesktopWidth;
   }
 }
