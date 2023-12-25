@@ -1,7 +1,7 @@
 import { Component, OnInit,Renderer2,ElementRef,ViewChild, AfterViewInit ,HostListener} from '@angular/core';
-import { MemberService } from '../members.service';
-import { Member } from '../member';
-import { VoicePart } from '../member';
+import { MemberService } from '../services/members.service';
+import { Member } from '../models/member';
+import { VoicePart } from '../models/member';
 
 
 @Component({

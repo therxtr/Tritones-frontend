@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Faqitem } from '../faqitem';
+import { Faqitem } from '../models/faqitem';
 
 @Component({
   selector: 'app-auditions',

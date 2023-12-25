@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PhotoService } from '../photos.service';
-import { Photo } from '../photos';
+import { PhotoService } from '../services/photos.service';
+import { Photo } from '../models/photos';
 
 @Component({
   selector: 'app-photos',
