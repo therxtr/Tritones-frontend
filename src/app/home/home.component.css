@@ -285,6 +285,7 @@
   width: 176px;
   height: 44px;
   font-size: 18px;
+  /* margin-top: 20px; */
 }
 
 #discover:hover {
@@ -653,6 +654,14 @@
   #btn-end {
     width: 264px;
     height: 68px;
+  }
+
+  #btn-end:hover {
+    background: var(--background-soft-yellow);
+  }
+  
+  #btn-end:hover span {
+    color: var(--background-color-gray);
   }
 
   #btn-end span {
