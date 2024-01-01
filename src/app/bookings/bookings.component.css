@@ -304,7 +304,7 @@ label {
   z-index: 999;
   width: 119px;
   height: 117px;
-  padding: 24px 61px;
+  /* padding: 24px 61px; */
   justify-content: center;
   align-items: center;
 
