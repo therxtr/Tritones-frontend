@@ -1,13 +1,14 @@
 header {
   height: 80px;
-  width: auto;
+  /* width: auto; */
   display: flex;
   justify-content:space-between; 
   align-items: center;
   position: sticky;
   top: 0;
-  /* width: 100vw; */
+  /* width: fit-content; */
   z-index: 2000; /* This ensures the header stays above other content */
+  padding: 0px 50px;
 }
 
 .logo {
@@ -16,10 +17,11 @@ header {
 }
 
 .nav-container {
+  flex: 1;
   display: flex;
-  /* justify-content:space-between; */
+  justify-content: flex-end;
   align-items: center;
-  gap: 20px; /* Adjust as necessary to create space between nav and toggle button */
+  gap: 50px; /* Adjust as necessary to create space between nav and toggle button */
 }
 
 .burger-menu {
@@ -94,12 +96,23 @@ app-theme-toggle {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  background-color: var(--background-color);
+  background-color: var(--background-color-gray);
 }
 
-.footer-column{
+.footer-column:first-child{
   flex: 1;
   margin-right: 50px;
+}
+
+.footer-column:first-child {
+  flex: initial; /* Resetting flex property for the first column */
+  margin-right: 0; /* Removing the right margin for the first column */
+}
+
+/* Right-aligning content in other columns */
+.footer-column:not(:first-child) {
+  text-align: right;
+  align-items: flex-end;
 }
 
 .tablet{
@@ -166,4 +179,8 @@ app-theme-toggle {
 
 .nav-mobile .body-text{
   color: var(--text-color-dark);
+}
+
+.soft-yellow {
+  color: var(--background-soft-yellow);
 }

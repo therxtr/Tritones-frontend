@@ -13,11 +13,17 @@ const routes: Routes = [
   { path: 'auditions', component: AuditionsComponent },
   { path: 'photos', component: PhotosComponent },
   { path: 'bookings', component: BookingsComponent },
-  {path:'contact-us', component: ContactUsComponent}
+  { path:'contact-us', component: ContactUsComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration:"enabled",
+      scrollOffset: [0, 0],
+      anchorScrolling: "enabled"
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

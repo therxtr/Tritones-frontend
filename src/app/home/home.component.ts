@@ -29,8 +29,8 @@
 // }
 
 import { Component, OnInit, HostListener } from '@angular/core';
-import { SpotifytracksService } from '../spotifytracks.service';
-import { Track } from '../spotify-tracks';
+import { SpotifytracksService } from '../services/spotifytracks.service';
+import { Track } from '../models/spotify-tracks';
 
 @Component({
   selector: 'app-home',

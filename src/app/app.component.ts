@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from './theme.service';
+import { ThemeService } from './services/theme.service';
 import { Observable } from 'rxjs';
-import { ContactService } from './contact.service';
+import { ContactService } from './services/contact.service';
 
 @Component({
   selector: 'app-root',

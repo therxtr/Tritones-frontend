@@ -1,6 +1,6 @@
 import { Component,OnInit,HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ContactService } from '../contact.service'; // Import the service
+import { ContactService } from '../services/contact.service'; // Import the service
 import { catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 

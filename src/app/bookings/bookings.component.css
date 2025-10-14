@@ -101,16 +101,19 @@
 }
 
 .thread{
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .thread-quotes-container {
+  display: flex;
+  justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
-  display: flex;
-  overflow-x: scroll;
+  /* overflow-x: scroll; comment back in once there's more than one quote */
   gap: 50px;
-
+  width: 100%;
 }
 
 .quote-container {
@@ -124,6 +127,8 @@
   padding: 20px; /* Adjust the padding value as needed */
   box-sizing: border-box; /* This ensures that padding is included in the element's total width and height */
   text-align: center;
+  /*  */
+  margin: auto;
 }
 
 
@@ -176,7 +181,7 @@
 
 
 .organization-logos {
-  margin-top: 10%;
+  /* margin-top: 10%; */
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
@@ -223,6 +228,16 @@
 .heading {
   color: #F9F6EF;
   font-family: Fraunces;
+  font-size: 33.219px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.heading-gold {
+  color:#E1D8B0;
+  font-family: Syne;
   font-size: 33.219px;
   font-style: normal;
   font-weight: 600;
@@ -304,7 +319,7 @@ label {
   z-index: 999;
   width: 119px;
   height: 117px;
-  padding: 24px 61px;
+  /* padding: 24px 61px; */
   justify-content: center;
   align-items: center;
 
@@ -346,8 +361,6 @@ label {
     font-size: 40px;
   }
 }
-
-
 
 @media (max-width: 480px) {
   .headline-1{
